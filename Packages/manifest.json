@@ -40,6 +40,19 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0"
-  }
+    "com.unity.modules.xr": "1.0.0",
+    "com.de-panther.webxr": "0.16.0-preview",
+    "com.de-panther.webxr-interactions": "0.16.3-preview"
+  },
+  "scopedRegistries": [
+    {
+      "name": "package.openupm.com",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.de-panther.webxr",
+        "com.de-panther.webxr-interactions",
+        "com.openupm"
+      ]
+    }
+  ]
 }
