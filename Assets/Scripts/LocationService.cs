@@ -29,6 +29,7 @@ public class LocationService : MonoBehaviour
 		double latitude = double.Parse(location.Split(',')[0]);
 		double longitude = double.Parse(location.Split(',')[1]);
 		print("lat: " + latitude + " long: " + longitude);
+		FindObjectOfType<GeoConverter>().SpawnGeoObjects(new GeoPoint(latitude, longitude));
 	}
 
 }
