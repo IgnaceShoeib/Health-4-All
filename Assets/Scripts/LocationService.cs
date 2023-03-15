@@ -6,6 +6,8 @@ public class LocationService : MonoBehaviour
 #if UNITY_WEBGL && !UNITY_EDITOR
     [DllImport("__Internal")]
     private static extern void RequestLocation();
+    [DllImport("__Internal")]
+    private static extern void RequestWatch();
 #endif
 
 	// Start is called before the first frame update
@@ -13,6 +15,7 @@ public class LocationService : MonoBehaviour
 	{
 #if !UNITY_EDITOR && UNITY_WEBGL
         WebGLInput.captureAllKeyboardInput = false;
+		SendWatchRequest();
 		SendLocationRequest();
 #endif
 	}
@@ -23,6 +26,12 @@ public class LocationService : MonoBehaviour
         RequestLocation();
 #endif
 	}
+	public void SendWatchRequest()
+	{
+#if UNITY_WEBGL && !UNITY_EDITOR
+        RequestWatch();
+#endif
+	}
 
 	public void GetLocation(string location)
 	{
@@ -31,5 +40,8 @@ public class LocationService : MonoBehaviour
 		print("lat: " + latitude + " long: " + longitude);
 		FindObjectOfType<GeoConverter>().SpawnGeoObjects(new GeoPoint(latitude, longitude));
 	}
-
+	public void GetWatch(double heading)
+	{
+		print(heading);
+	}
 }
