@@ -1,19 +1,19 @@
 mergeInto(LibraryManager.library, {
-    RequestWatch: function getWatch() {
-        let id;
-        let heading;
-        let successCallback = (position) => {
-            heading = position.coords.heading;
-            console.log(heading);
-            unityInstance.SendMessage("LocationService", "GetWatch", heading);
-            navigator.geolocation.clearWatch(id);
-        };
-
-        let errorCallback = (error) => {
-            console.log(error);
-        };
-
-        id = navigator.geolocation.watchPosition(successCallback, errorCallback);
+    RequestHeading: function getHeading() {
+        window.addEventListener("deviceorientationabsolute", manageCompass, true);
+        function manageCompass(event) {
+            if (event.webkitCompassHeading) {
+                absoluteHeading = event.webkitCompassHeading + 180;
+            } else {
+                absoluteHeading = 180 - event.alpha;
+            }
+            if (absoluteHeading != null)
+            {
+                unityInstance.SendMessage("LocationService", "GetHeading", absoluteHeading);
+                window.removeEventListener("deviceorientationabsolute", manageCompass, true);
+            }
+            
+        }
     },
     RequestLocation: function getLocation() {
         let location;

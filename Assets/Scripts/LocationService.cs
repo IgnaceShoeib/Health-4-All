@@ -3,11 +3,13 @@ using System.Runtime.InteropServices;
 
 public class LocationService : MonoBehaviour
 {
+	public static GeoPoint GeoPoint;
+	public static double? Heading;
 #if UNITY_WEBGL && !UNITY_EDITOR
     [DllImport("__Internal")]
     private static extern void RequestLocation();
     [DllImport("__Internal")]
-    private static extern void RequestWatch();
+    private static extern void RequestHeading();
 #endif
 
 	// Start is called before the first frame update
@@ -15,7 +17,7 @@ public class LocationService : MonoBehaviour
 	{
 #if !UNITY_EDITOR && UNITY_WEBGL
         WebGLInput.captureAllKeyboardInput = false;
-		SendWatchRequest();
+		SendHeadingRequest();
 		SendLocationRequest();
 #endif
 	}
@@ -26,22 +28,24 @@ public class LocationService : MonoBehaviour
         RequestLocation();
 #endif
 	}
-	public void SendWatchRequest()
+	public void SendHeadingRequest()
 	{
 #if UNITY_WEBGL && !UNITY_EDITOR
-        RequestWatch();
+        RequestHeading();
 #endif
 	}
 
 	public void GetLocation(string location)
 	{
-		double latitude = double.Parse(location.Split(',')[0]);
-		double longitude = double.Parse(location.Split(',')[1]);
-		print("lat: " + latitude + " long: " + longitude);
-		FindObjectOfType<GeoConverter>().SpawnGeoObjects(new GeoPoint(latitude, longitude));
+		GeoPoint.Latitude = double.Parse(location.Split(',')[0]);
+		GeoPoint.Longitude = double.Parse(location.Split(',')[1]);
+		print("lat: " + GeoPoint.Latitude + " long: " + GeoPoint.Longitude);
+		FindObjectOfType<GeoConverter>().SpawnGeoObjects(GeoPoint,Heading);
 	}
-	public void GetWatch(double heading)
+	public void GetHeading(double heading)
 	{
+		Heading = heading;
 		print(heading);
+		FindObjectOfType<GeoConverter>().SpawnGeoObjects(GeoPoint, Heading);
 	}
 }
