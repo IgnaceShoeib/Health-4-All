@@ -1691,10 +1691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencePoint: {x: 0, y: 0, z: 0}
-  ObjectGeoPoint:
-    Latitude: 51.32144
-    Longitude: 4.516219
-  Object: {fileID: 0}
+  GeoObjects: []
 --- !u!4 &343890127
 Transform:
   m_ObjectHideFlags: 0

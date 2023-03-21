@@ -40,12 +40,12 @@ public class LocationService : MonoBehaviour
 		GeoPoint.Latitude = double.Parse(location.Split(',')[0]);
 		GeoPoint.Longitude = double.Parse(location.Split(',')[1]);
 		print("lat: " + GeoPoint.Latitude + " long: " + GeoPoint.Longitude);
-		FindObjectOfType<GeoConverter>().SpawnGeoObjects(GeoPoint,Heading);
+		FindObjectOfType<GeoObjectSpawner>().SpawnGeoObjects(GeoPoint,Heading);
 	}
 	public void GetHeading(double heading)
 	{
 		Heading = heading;
 		print(heading);
-		FindObjectOfType<GeoConverter>().SpawnGeoObjects(GeoPoint, Heading);
+		FindObjectOfType<GeoObjectSpawner>().SpawnGeoObjects(GeoPoint, Heading);
 	}
 }

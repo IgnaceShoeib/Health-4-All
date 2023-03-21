@@ -1,16 +1,14 @@
 using System;
 using UnityEngine;
 
-public class GeoConverter : MonoBehaviour
+public class GeoObjectSpawner : MonoBehaviour
 {
 	// Define a reference point in the game world
 	public Vector3 referencePoint;
 
 	// Define the user's coordinates and the object's coordinates
 	private GeoPoint UserGeoPoint;
-	public GeoPoint ObjectGeoPoint;
-
-	public GameObject Object;
+	public GeoObject[] GeoObjects;
 
 	// Calculate the distance between two points on a sphere using the Haversine formula
 	public double Haversine(GeoPoint geoPoint1, GeoPoint geoPoint2)
@@ -57,11 +55,14 @@ public class GeoConverter : MonoBehaviour
 		// Convert the user's coordinates to in-game coordinates
 		Vector3 userPosition = ConvertGeoToGame(UserGeoPoint);
 
-		// Convert the object's coordinates to in-game coordinates
-		Vector3 objectPosition = ConvertGeoToGame(ObjectGeoPoint);
+        foreach (var geoObject in GeoObjects)
+        {
+            // Convert the object's coordinates to in-game coordinates
+            Vector3 objectPosition = ConvertGeoToGame(geoObject.GeoPoint);
 
-		var spawnedObject = Instantiate(Object, objectPosition, new Quaternion());
-        spawnedObject.transform.RotateAround(userPosition, Vector3.up, (float)heading*-1);
-        Debug.Log("Object position: " + spawnedObject.transform.position);
-	}
+            var spawnedObject = Instantiate(geoObject.Object, objectPosition, new Quaternion());
+            spawnedObject.transform.RotateAround(userPosition, Vector3.up, (float)heading * -1);
+            Debug.Log("Object position: " + spawnedObject.transform.position);
+        }
+    }
 }
