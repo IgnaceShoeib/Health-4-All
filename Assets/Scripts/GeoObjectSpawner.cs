@@ -46,7 +46,7 @@ public class GeoObjectSpawner : MonoBehaviour
 
 	public void SpawnGeoObjects(GeoPoint user, double? heading)
 	{
-		if (heading == null || user.Latitude == 0 || user.Longitude == 0 || user == null || user.Latitude == null || user.Longitude == null)
+		if (heading == null || user.Latitude == 0 || user.Longitude == 0)
 		{
 			return;
 		}
