@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GeoObjectSpawner : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GeoObjectSpawner : MonoBehaviour
 	// Define the user's coordinates and the object's coordinates
 	private GeoPoint UserGeoPoint;
 	public GeoObject[] GeoObjects;
+    public float SpawnDistance = 5;
 
 	// Calculate the distance between two points on a sphere using the Haversine formula
 	public double Haversine(GeoPoint geoPoint1, GeoPoint geoPoint2)
@@ -40,8 +42,9 @@ public class GeoObjectSpawner : MonoBehaviour
         double objectY = 1;
         double objectZ = distanceInGameUnits * Mathf.Cos((float)geoPoint.Longitude) * Mathf.Sin((float)geoPoint.Latitude)*-1;
 
+        Vector2 random = Random.insideUnitCircle*SpawnDistance;
         // Return the object's position as a Vector3 object
-        return new Vector3((float)objectX, (float)objectY, (float)objectZ) + referencePoint;
+        return new Vector3((float)objectX+random.x, (float)objectY, (float)objectZ+random.y) + referencePoint;
     }
 
 	public void SpawnGeoObjects(GeoPoint user, double? heading)
