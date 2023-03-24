@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Mascot : MonoBehaviour
@@ -10,12 +11,19 @@ public class Mascot : MonoBehaviour
 	public GameObject HappinessMeter;
 
 	private Vector3 initialScale;
+	private Vector3 initialPosition;
 	private AudioSource audioSource; // Reference to the audio source component
+	private Renderer renderer;
+	private Material material;
 
 	void Start()
 	{
+		// get material
+		renderer = HappinessMeter.GetComponent<Renderer>();
+		material = renderer.material;
 		// Store the initial scale and position of the happiness meter
 		initialScale = HappinessMeter.transform.localScale;
+		initialPosition = HappinessMeter.transform.localPosition;
 
 		// Try to get an existing AudioSource component on the same object
 		audioSource = GetComponent<AudioSource>();
@@ -45,18 +53,31 @@ public class Mascot : MonoBehaviour
 			// Scale the happiness meter based on the current food value
 			float scalePercentage = Mathf.InverseLerp(MinFoodValue, MaxFoodValue, FoodValue);
 			float newScaleY = Mathf.Lerp(MinHappinessLength, MaxHappinessLength, scalePercentage);
-			HappinessMeter.transform.localScale = new Vector3(initialScale.x, newScaleY, initialScale.z);
-
-			// Update the emission color based on the happiness meter's scale
-			Renderer renderer = HappinessMeter.GetComponent<Renderer>();
-			Material material = renderer.material;
-
-			float colorPercentage = Mathf.InverseLerp(MinHappinessLength, MaxHappinessLength, newScaleY);
-			Color emissionColor = Color.Lerp(Color.red, Color.green, colorPercentage);
-			material.SetColor("_EmissionColor", emissionColor);
 
 			var positionDifference =  newScaleY- currentScaleY;
-			HappinessMeter.transform.localPosition = new Vector3(HappinessMeter.transform.localPosition.x, HappinessMeter.transform.localPosition.y + positionDifference, HappinessMeter.transform.localPosition.z);
+			StartCoroutine(ChangeHappinessMeterScale(newScaleY, HappinessMeter.transform.localPosition.y + positionDifference, 0.5f));
 		}
 	}
+
+	IEnumerator ChangeHappinessMeterScale(float newScaleY, float newPositionY, float duration)
+	{
+		float initialScaleY = HappinessMeter.transform.localScale.y;
+		float initialPositionY = HappinessMeter.transform.localPosition.y;
+		float elapsedTime = 0f;
+		while (elapsedTime < duration)
+		{
+			elapsedTime += Time.deltaTime;
+			float t = Mathf.Clamp01(elapsedTime / duration);
+			float currentScaleY = Mathf.Lerp(initialScaleY, newScaleY, t);
+			float currentPositionY = Mathf.Lerp(initialPositionY, newPositionY, t);
+			HappinessMeter.transform.localScale = new Vector3(initialScale.x, currentScaleY, initialScale.z);
+			HappinessMeter.transform.localPosition = new Vector3(initialPosition.x, currentPositionY, initialPosition.z);
+			// Update the emission color based on the happiness meter's scale
+			float colorPercentage = Mathf.InverseLerp(MinHappinessLength, MaxHappinessLength, currentScaleY);
+			Color emissionColor = Color.Lerp(Color.red, Color.green, colorPercentage);
+			material.SetColor("_EmissionColor", emissionColor);
+			yield return null;
+		}
+	}
+
 }
