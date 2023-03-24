@@ -921,6 +921,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dffcf439b661c8242b00c603a64b7f78, type: 3}
+--- !u!1 &2050166783 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 869763016888910135, guid: 27c427124b406e24eb520e9e764b2554,
+    type: 3}
+  m_PrefabInstance: {fileID: 1745158877623844347}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2103689925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1120,7 +1126,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
@@ -1130,6 +1136,29 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1745158877623844347}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1459002505818796261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050166783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c854a3582803284aaec41c020adc590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionSounds:
+  - {fileID: 8300000, guid: c5853b2e87d54614fbc9ed55ea1e6c0a, type: 3}
+  - {fileID: 8300000, guid: a1a1fd2509ceb394ab4d0b04cf9eca04, type: 3}
+  - {fileID: 8300000, guid: 5978a85d26ff33d4cb95eef7095efe9f, type: 3}
+  - {fileID: 8300000, guid: 4d45c7755754a3b4da80ce9a5865cfc5, type: 3}
+  - {fileID: 8300000, guid: 8c36f404d57f8234c815197f2171a5ba, type: 3}
+  - {fileID: 8300000, guid: 499f31bd6a03c6e4d8e6cd1a1caf6184, type: 3}
+  - {fileID: 8300000, guid: 2a17a8c22c190f1429b3b168773079ac, type: 3}
+  - {fileID: 8300000, guid: 47531f87688270e408f0879d3266b0e3, type: 3}
+  - {fileID: 8300000, guid: 155cbaf10be478a48b62483433bafe02, type: 3}
+  - {fileID: 8300000, guid: 3ddff193a2550b04bafdb6a2435bc3f2, type: 3}
 --- !u!1001 &1745158877623844347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1279,6 +1308,7 @@ GameObject:
   - component: {fileID: 1907264582309368946}
   - component: {fileID: 1907264582309368949}
   - component: {fileID: 1907264582309368950}
+  - component: {fileID: 1907264582309368951}
   m_Layer: 0
   m_Name: Carrot2_Low__150_Tris_
   m_TagString: Untagged
@@ -1464,6 +1494,36 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &1907264582309368951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907264582309368945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c854a3582803284aaec41c020adc590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionSounds:
+  - {fileID: 8300000, guid: 32667f12659c9e344b33ead3756bd6dc, type: 3}
+  - {fileID: 8300000, guid: 7a471df170d51b3459adfecf52299ad2, type: 3}
+  - {fileID: 8300000, guid: 541b84dcd34ef9e4699c45ba5588c456, type: 3}
+  - {fileID: 8300000, guid: a09c4cf344148c94eab068bf08db7765, type: 3}
+  - {fileID: 8300000, guid: 67546d488bc37904b9e74229dbf3d916, type: 3}
+  - {fileID: 8300000, guid: fb93d2e5a19ec3e4088f759339dd6e82, type: 3}
+  - {fileID: 8300000, guid: 6147fa27e19451c41a809f0a37983828, type: 3}
+  - {fileID: 8300000, guid: 679355e66d7595e4985912b9da8d1c34, type: 3}
+  - {fileID: 8300000, guid: d03d00b76ff15c14a8452f82064adeae, type: 3}
+  - {fileID: 8300000, guid: c9cff79a20c8b5d4b92e2ccedcc72798, type: 3}
+  - {fileID: 8300000, guid: 6e4c88651fa890349b7d172da34f3eb8, type: 3}
+  - {fileID: 8300000, guid: 85693c713535f4f4dbe974fe36bfe93c, type: 3}
+  - {fileID: 8300000, guid: a85282dec2451804ca7a0abe2535aa2c, type: 3}
+  - {fileID: 8300000, guid: a7be73b1d31e07546a0bceef7c0a4e2f, type: 3}
+  - {fileID: 8300000, guid: 439245fdb58c94240b1322dee015e27c, type: 3}
+  - {fileID: 8300000, guid: d85b1344d0b5697458991be6423d7a21, type: 3}
+  - {fileID: 8300000, guid: a86a805c58748a4499cead6a30e4980f, type: 3}
 --- !u!33 &2349853095304469792
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1737,7 +1797,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2789031455047197437}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.898, y: -2.57, z: 2.713}
+  m_LocalPosition: {x: 2.7, y: -10.71, z: 2.28}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1759,6 +1819,7 @@ GameObject:
   - component: {fileID: 2802124547429263050}
   - component: {fileID: 2802124547429263053}
   - component: {fileID: 2802124547429263054}
+  - component: {fileID: 2802124547429263055}
   m_Layer: 0
   m_Name: Banana_Low__150_Tris_
   m_TagString: Untagged
@@ -1994,6 +2055,26 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &2802124547429263055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2789031455047197437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c854a3582803284aaec41c020adc590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionSounds:
+  - {fileID: 8300000, guid: 97ce29e528f38ad48ad6afb2d8d03da7, type: 3}
+  - {fileID: 8300000, guid: d75c6098723f7fb4e8e79ac018f5be6e, type: 3}
+  - {fileID: 8300000, guid: 90d94f7c0f2380544b8eefc1943e5e69, type: 3}
+  - {fileID: 8300000, guid: bef483e6a3193d045959246213f8da2c, type: 3}
+  - {fileID: 8300000, guid: 7b719821e3e2a124bbd89f1a6f2d1655, type: 3}
+  - {fileID: 8300000, guid: 275204cf471812e43b8a69ea4957bf2b, type: 3}
+  - {fileID: 8300000, guid: 49a93d83a5bc93342ab55e3f62544d9f, type: 3}
 --- !u!1 &3795158343508311672
 GameObject:
   m_ObjectHideFlags: 0
@@ -2009,6 +2090,7 @@ GameObject:
   - component: {fileID: 3817691142532831329}
   - component: {fileID: 3817691142532831332}
   - component: {fileID: 3817691142532831333}
+  - component: {fileID: 3817691142532831334}
   m_Layer: 0
   m_Name: Lemon1_Low__200_Tris_
   m_TagString: Untagged
@@ -2259,6 +2341,26 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &3817691142532831334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3795158343508311672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c854a3582803284aaec41c020adc590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionSounds:
+  - {fileID: 8300000, guid: 97ce29e528f38ad48ad6afb2d8d03da7, type: 3}
+  - {fileID: 8300000, guid: d75c6098723f7fb4e8e79ac018f5be6e, type: 3}
+  - {fileID: 8300000, guid: 90d94f7c0f2380544b8eefc1943e5e69, type: 3}
+  - {fileID: 8300000, guid: bef483e6a3193d045959246213f8da2c, type: 3}
+  - {fileID: 8300000, guid: 7b719821e3e2a124bbd89f1a6f2d1655, type: 3}
+  - {fileID: 8300000, guid: 275204cf471812e43b8a69ea4957bf2b, type: 3}
+  - {fileID: 8300000, guid: 49a93d83a5bc93342ab55e3f62544d9f, type: 3}
 --- !u!33 &5335034030584953970
 MeshFilter:
   m_ObjectHideFlags: 0
