@@ -30,7 +30,6 @@ public class CollisionSound : MonoBehaviour
 
 			// Calculate volume based on velocity
 			audioSource.volume = collision.relativeVelocity.magnitude/10;
-			print(collision.relativeVelocity.magnitude);
 
 			audioSource.Play();
 		}
