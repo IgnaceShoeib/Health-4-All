@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FoodValue: 5
+  EatingSound: {fileID: 8300000, guid: a60589bca7ea2d14a93f2271884e7541, type: 3}
 --- !u!114 &5784183150584074755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,10 +280,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSounds:
-  - {fileID: 8300000, guid: a60589bca7ea2d14a93f2271884e7541, type: 3}
+  - {fileID: 8300000, guid: 01ec7230ff2a7594d88bfd55c5643bae, type: 3}
   - {fileID: 8300000, guid: 6cfebab816cc10d4b83be5fea81a51e4, type: 3}
   - {fileID: 8300000, guid: 673971b553368af459efa046c697f8bf, type: 3}
   - {fileID: 8300000, guid: f35fec1932da9ee48bf8881cb278cc09, type: 3}
   - {fileID: 8300000, guid: bbfc60c960b5552458dc6241c9794601, type: 3}
   - {fileID: 8300000, guid: 43a60323ee7387140a8cfa777bc0bac9, type: 3}
-  - {fileID: 8300000, guid: 01ec7230ff2a7594d88bfd55c5643bae, type: 3}

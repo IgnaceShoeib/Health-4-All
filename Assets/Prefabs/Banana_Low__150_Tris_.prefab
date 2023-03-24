@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FoodValue: 7
+  EatingSound: {fileID: 8300000, guid: f314077c844a0174e98d1b8341aaaef1, type: 3}
 --- !u!114 &3289077200857905601
 MonoBehaviour:
   m_ObjectHideFlags: 0
