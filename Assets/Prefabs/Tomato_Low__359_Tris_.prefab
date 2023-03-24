@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 866775580318141720}
   - component: {fileID: 866775580318141721}
   - component: {fileID: 1745158877623844349}
+  - component: {fileID: 1459002505818796261}
   m_Layer: 0
   m_Name: Tomato_Low__359_Tris_
   m_TagString: Untagged
@@ -223,6 +224,29 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &1459002505818796261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869763016888910135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c854a3582803284aaec41c020adc590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionSounds:
+  - {fileID: 8300000, guid: c5853b2e87d54614fbc9ed55ea1e6c0a, type: 3}
+  - {fileID: 8300000, guid: a1a1fd2509ceb394ab4d0b04cf9eca04, type: 3}
+  - {fileID: 8300000, guid: 5978a85d26ff33d4cb95eef7095efe9f, type: 3}
+  - {fileID: 8300000, guid: 4d45c7755754a3b4da80ce9a5865cfc5, type: 3}
+  - {fileID: 8300000, guid: 8c36f404d57f8234c815197f2171a5ba, type: 3}
+  - {fileID: 8300000, guid: 499f31bd6a03c6e4d8e6cd1a1caf6184, type: 3}
+  - {fileID: 8300000, guid: 2a17a8c22c190f1429b3b168773079ac, type: 3}
+  - {fileID: 8300000, guid: 47531f87688270e408f0879d3266b0e3, type: 3}
+  - {fileID: 8300000, guid: 155cbaf10be478a48b62483433bafe02, type: 3}
+  - {fileID: 8300000, guid: 3ddff193a2550b04bafdb6a2435bc3f2, type: 3}
 --- !u!1 &869840414227865437
 GameObject:
   m_ObjectHideFlags: 0
