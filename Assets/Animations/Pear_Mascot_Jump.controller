@@ -134,7 +134,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Eyes_EyesAction 0
+  m_Name: Eyes 0
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -463,7 +463,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Eyes_EyesAction
+  m_Name: Eyes
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -490,7 +490,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mouth_MouthAction
+  m_Name: Mouth
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -517,7 +517,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Armature_ArmatureAction_001
+  m_Name: Jump
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
