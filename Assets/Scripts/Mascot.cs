@@ -15,9 +15,12 @@ public class Mascot : MonoBehaviour
 	private AudioSource audioSource; // Reference to the audio source component
 	private Renderer renderer;
 	private Material material;
+	private Animator animator;
 
 	void Start()
 	{
+		//get animator
+		animator = gameObject.GetComponentInParent<Animator>();
 		// get material
 		renderer = HappinessMeter.GetComponent<Renderer>();
 		material = renderer.material;
@@ -42,11 +45,12 @@ public class Mascot : MonoBehaviour
 	{
 		if (collision.gameObject.GetComponent<Food>() != null)
 		{
-			var currentPositionY = HappinessMeter.transform.localPosition.y;
 			var currentScaleY = HappinessMeter.transform.localScale.y;
 
 			Food food = collision.gameObject.GetComponent<Food>();
-			FoodValue = Mathf.Clamp(FoodValue + food.FoodValue, MinFoodValue, MaxFoodValue);
+            if (food.FoodValue > 0)
+                animator.SetTrigger("Jump");
+            FoodValue = Mathf.Clamp(FoodValue + food.FoodValue, MinFoodValue, MaxFoodValue);
 			audioSource.PlayOneShot(food.EatingSound);
 			Destroy(food.gameObject);
 
