@@ -83,5 +83,4 @@ public class Mascot : MonoBehaviour
 			yield return null;
 		}
 	}
-
 }
