@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Food.unity
     guid: 85380d4847db7b74a850284461349c36
+  - enabled: 1
+    path: Assets/Scenes/Sport.unity
+    guid: d6e8a074c9a2b2b4c80790e183acf082
+  - enabled: 1
+    path: Assets/Scenes/Mind.unity
+    guid: e26af81b9863eca46924d77c1cf263ca
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 8ce9bbd7fea974f49bf3e89941145f52,
       type: 2}
