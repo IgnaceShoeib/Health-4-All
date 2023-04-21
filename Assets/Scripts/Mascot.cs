@@ -48,9 +48,8 @@ public class Mascot : MonoBehaviour
 			var currentScaleY = HappinessMeter.transform.localScale.y;
 
 			Food food = collision.gameObject.GetComponent<Food>();
-            if (food.FoodValue > 0)
-                animator.SetTrigger("Jump");
-            FoodValue = Mathf.Clamp(FoodValue + food.FoodValue, MinFoodValue, MaxFoodValue);
+			animator.SetTrigger(food.FoodValue > 0 ? "Jump" : "Sad");
+			FoodValue = Mathf.Clamp(FoodValue + food.FoodValue, MinFoodValue, MaxFoodValue);
 			audioSource.PlayOneShot(food.EatingSound);
 			Destroy(food.gameObject);
 
