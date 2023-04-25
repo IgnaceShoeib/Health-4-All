@@ -9,23 +9,35 @@ public class Mascot : MonoBehaviour
 	public float MinHappinessLength = 0.05f;
 	public float MaxHappinessLength = 0.65f;
 	public GameObject HappinessMeter;
+	public GameObject Leaf;
 
-	private Vector3 initialScale;
+    private Vector3 initialScale;
 	private Vector3 initialPosition;
 	private AudioSource audioSource; // Reference to the audio source component
-	private Renderer renderer;
+	private Renderer happinessRenderer;
+	private Material happinessMaterial;
+    private Renderer renderer;
 	private Material material;
+    private Renderer leafRenderer;
+    private Material leafMaterial;
+    private Color color;
 	private Animator animator;
 
 	void Start()
 	{
 		//get animator
 		animator = gameObject.GetComponentInParent<Animator>();
-		// get material
-		renderer = HappinessMeter.GetComponent<Renderer>();
-		material = renderer.material;
-		// Store the initial scale and position of the happiness meter
-		initialScale = HappinessMeter.transform.localScale;
+		// get happiness meter material
+		happinessRenderer = HappinessMeter.GetComponent<Renderer>();
+		happinessMaterial = happinessRenderer.material;
+        // get material
+        renderer = GetComponent<Renderer>();
+        material = renderer.material;
+        leafRenderer = Leaf.GetComponent<Renderer>();
+        leafMaterial = leafRenderer.material;
+        color = material.color;
+        // Store the initial scale and position of the happiness meter
+        initialScale = HappinessMeter.transform.localScale;
 		initialPosition = HappinessMeter.transform.localPosition;
 
 		// Try to get an existing AudioSource component on the same object
@@ -78,8 +90,21 @@ public class Mascot : MonoBehaviour
 			// Update the emission color based on the happiness meter's scale
 			float colorPercentage = Mathf.InverseLerp(MinHappinessLength, MaxHappinessLength, currentScaleY);
 			Color emissionColor = Color.Lerp(Color.red, Color.green, colorPercentage);
-			material.SetColor("_EmissionColor", emissionColor);
-			yield return null;
+			happinessMaterial.SetColor("_EmissionColor", emissionColor);
+			// Update the mascot's material
+            if (colorPercentage <= 0.5f)
+            {
+                Color baseColor = Color.Lerp(Color.grey, color, colorPercentage*2);
+                material.color = baseColor;
+                leafMaterial.color = baseColor;
+            }
+            else
+            {
+                Color baseColor = Color.Lerp(color, new Color(0.2917078f,1,0), (colorPercentage-0.5f)*2);
+                material.color= baseColor;
+                leafMaterial.color= baseColor;
+            }
+            yield return null;
 		}
 	}
 }

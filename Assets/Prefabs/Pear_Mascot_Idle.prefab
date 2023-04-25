@@ -713,6 +713,7 @@ MonoBehaviour:
   MinHappinessLength: 0.05
   MaxHappinessLength: 0.65
   HappinessMeter: {fileID: 4599146798312449191}
+  Leaf: {fileID: 6973594517496230866}
 --- !u!1 &3969716220271483245
 GameObject:
   m_ObjectHideFlags: 0
