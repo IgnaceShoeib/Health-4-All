@@ -166,7 +166,7 @@ public class Weather_Controller : MonoBehaviour
         _fTimeChangeWeatherStart = 0.0f;
         _fTimeChangeWeatherEnd = 0.5f;
 
-        if (_bUseRandomDaysWeather == true)
+        if (_bUseRandomDaysWeather)
             _iAmountOfDaysToNewWeather = Random.Range(_iMinAmountOfDaysToNewWeather, _iMaxAmountOfDaysToNewWeather);
         else
             _iAmountOfDaysToNewWeather = _iChangeWeatherAfterDays;
@@ -184,9 +184,9 @@ public class Weather_Controller : MonoBehaviour
 
 	void Update () 
     {
-        if (_bUseRandomWeather == true)
+        if (_bUseRandomWeather)
         {
-            if (_bUseRandomDaysWeather == true)
+            if (_bUseRandomDaysWeather)
             {
                 if (_iAmountOfDaysSinceLastWeather >= _iAmountOfDaysToNewWeather)
                 {
@@ -206,10 +206,10 @@ public class Weather_Controller : MonoBehaviour
             }
         }
 
-        if (_bChangeWeather == true)
+        if (_bChangeWeather)
             PickRandomWeather();
 
-        if (_bStartWeatherChange == true)
+        if (_bStartWeatherChange)
             ExitCurrentWeather(_iNewWeather);
 	}
 
@@ -263,32 +263,32 @@ public class Weather_Controller : MonoBehaviour
     void ChangeWeatherToSun()
     {
         en_CurrWeather = WeatherType.SUN;
-        this.GetComponent<Weather_Sun>().enabled = true;
-        this.GetComponent<Weather_Sun>().GetSet_bUseInit = true;
+        GetComponent<Weather_Sun>().enabled = true;
+        GetComponent<Weather_Sun>().GetSet_bUseInit = true;
     }
     void ChangeWeatherToCloudy()
     {
         en_CurrWeather = WeatherType.CLOUDY;
-        this.GetComponent<Weather_Cloudy>().enabled = true;
-        this.GetComponent<Weather_Cloudy>().GetSet_bUseInit = true;
+        GetComponent<Weather_Cloudy>().enabled = true;
+        GetComponent<Weather_Cloudy>().GetSet_bUseInit = true;
     }
     void ChangeWeatherToRain()
     {
         en_CurrWeather = WeatherType.RAIN;
-        this.GetComponent<Weather_Rain>().enabled = true;
-        this.GetComponent<Weather_Rain>().GetSet_bUseInit = true;
+        GetComponent<Weather_Rain>().enabled = true;
+        GetComponent<Weather_Rain>().GetSet_bUseInit = true;
     }
     void ChangeWeatherToThunderstorm()
     {
         en_CurrWeather = WeatherType.THUNDERSTORM;
-        this.GetComponent<Weather_Thunderstorm>().enabled = true;
-        this.GetComponent<Weather_Thunderstorm>().GetSet_bUseInit = true;
+        GetComponent<Weather_Thunderstorm>().enabled = true;
+        GetComponent<Weather_Thunderstorm>().GetSet_bUseInit = true;
     }
     void ChangeWeatherToSnow()
     {
         en_CurrWeather = WeatherType.SNOW;
-        this.GetComponent<Weather_Snow>().enabled = true;
-        this.GetComponent<Weather_Snow>().GetSet_bUseInit = true;
+        GetComponent<Weather_Snow>().enabled = true;
+        GetComponent<Weather_Snow>().GetSet_bUseInit = true;
     }
 
     public void ExitCurrentWeather(int NewWeatherType)
