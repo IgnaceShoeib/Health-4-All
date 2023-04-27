@@ -229,27 +229,27 @@ public class Weather_Controller : MonoBehaviour
 
     void CheckIfWeatherTypeIsOn(int NewWeatherType)
     {
-        if (NewWeatherType == (int)WeatherType.SUN && _bUseSun != false)
+        if (NewWeatherType == (int)WeatherType.SUN && _bUseSun)
         {
             _iNewWeather = NewWeatherType;
             _bStartWeatherChange = true;
         }
-        else if (NewWeatherType == (int)WeatherType.CLOUDY && _bUseCloudy != false)
+        else if (NewWeatherType == (int)WeatherType.CLOUDY && _bUseCloudy)
         {
             _iNewWeather = NewWeatherType;
             _bStartWeatherChange = true;
         }
-        else if (NewWeatherType == (int)WeatherType.RAIN && _bUseRain != false)
+        else if (NewWeatherType == (int)WeatherType.RAIN && _bUseRain)
         {
             _iNewWeather = NewWeatherType;
             _bStartWeatherChange = true;
         }
-        else if (NewWeatherType == (int)WeatherType.THUNDERSTORM && _bUseThunderstorm != false)
+        else if (NewWeatherType == (int)WeatherType.THUNDERSTORM && _bUseThunderstorm)
         {
             _iNewWeather = NewWeatherType;
             _bStartWeatherChange = true;
         }
-        else if (NewWeatherType == (int)WeatherType.SNOW && _bUseSnow != false)
+        else if (NewWeatherType == (int)WeatherType.SNOW && _bUseSnow)
         {
             _iNewWeather = NewWeatherType;
             _bStartWeatherChange = true;
@@ -310,13 +310,13 @@ public class Weather_Controller : MonoBehaviour
             en_LastWeather = WeatherType.SUN;
             _fTimeChangeWeatherStart += Time.deltaTime;
 
-// Call the exit function in the weather type
-			this.GetComponent<Weather_Sun>().ExitWeatherEffect(this.GetComponent<Weather_Sun>().GetSet_gSoundEffect);
+			// Call the exit function in the weather type
+			GetComponent<Weather_Sun>().ExitWeatherEffect(GetComponent<Weather_Sun>().GetSet_gSoundEffect);
 
             // After we reached or set time, we start to change into the new weather type
             if (_fTimeChangeWeatherStart >= _fTimeChangeWeatherEnd)
             {
-                this.GetComponent<Weather_Sun>().enabled = false;
+                GetComponent<Weather_Sun>().enabled = false;
                 EnterNewWeather(NewWeatherType);
 
                 _fTimeChangeWeatherStart = 0.0f;
@@ -329,12 +329,12 @@ public class Weather_Controller : MonoBehaviour
             _fTimeChangeWeatherStart += Time.deltaTime;
 
 // Call the exit function in the weather type
-			this.GetComponent<Weather_Cloudy>().ExitWeatherEffect(this.GetComponent<Weather_Cloudy>().GetSet_gSoundEffect);
+			GetComponent<Weather_Cloudy>().ExitWeatherEffect(GetComponent<Weather_Cloudy>().GetSet_gSoundEffect);
 
             // After we reached or set time, we start to change into the new weather type
             if (_fTimeChangeWeatherStart >= _fTimeChangeWeatherEnd)
             {
-                this.GetComponent<Weather_Cloudy>().enabled = false;
+                GetComponent<Weather_Cloudy>().enabled = false;
                 EnterNewWeather(NewWeatherType);
 
                 _fTimeChangeWeatherStart = 0.0f;
@@ -347,13 +347,13 @@ public class Weather_Controller : MonoBehaviour
 			_fTimeChangeWeatherStart += Time.deltaTime;
 
             // Call the exit function in the weather type
-            this.GetComponent<Weather_Rain>().ExitWeatherEffect(this.GetComponent<Weather_Rain>().GetSet_gPartRain);
+            GetComponent<Weather_Rain>().ExitWeatherEffect(GetComponent<Weather_Rain>().GetSet_gPartRain);
 
             // After we reached or set time, we start to change into the new weather type
 
             if (_fTimeChangeWeatherStart >= _fTimeChangeWeatherEnd)
             {
-                this.GetComponent<Weather_Rain>().enabled = false;
+                GetComponent<Weather_Rain>().enabled = false;
                 EnterNewWeather(NewWeatherType);
 
                 _fTimeChangeWeatherStart = 0.0f;
@@ -366,12 +366,12 @@ public class Weather_Controller : MonoBehaviour
             _fTimeChangeWeatherStart += Time.deltaTime;
 
 			// Call the exit function in the weather type
-			this.GetComponent<Weather_Thunderstorm>().ExitWeatherEffect(this.GetComponent<Weather_Thunderstorm>().GetSet_gPartRain);
+			GetComponent<Weather_Thunderstorm>().ExitWeatherEffect(GetComponent<Weather_Thunderstorm>().GetSet_gPartRain);
 
             // After we reached or set time, we start to change into the new weather type
             if (_fTimeChangeWeatherStart >= _fTimeChangeWeatherEnd)
             {
-                this.GetComponent<Weather_Thunderstorm>().enabled = false;
+                GetComponent<Weather_Thunderstorm>().enabled = false;
                 EnterNewWeather(NewWeatherType);
 
                 _fTimeChangeWeatherStart = 0.0f;
@@ -384,12 +384,12 @@ public class Weather_Controller : MonoBehaviour
             _fTimeChangeWeatherStart += Time.deltaTime;
 
 			// Call the exit function in the weather type
-			this.GetComponent<Weather_Snow>().ExitWeatherEffect(this.GetComponent<Weather_Snow>().GetSet_gPartSnow);
+			GetComponent<Weather_Snow>().ExitWeatherEffect(GetComponent<Weather_Snow>().GetSet_gPartSnow);
 
             // After we reached or set time, we start to change into the new weather type
             if (_fTimeChangeWeatherStart >= _fTimeChangeWeatherEnd)
             {
-                this.GetComponent<Weather_Snow>().enabled = false;
+                GetComponent<Weather_Snow>().enabled = false;
                 EnterNewWeather(NewWeatherType);
 
                 _fTimeChangeWeatherStart = 0.0f;
@@ -450,7 +450,7 @@ public class Weather_Controller : MonoBehaviour
         if (matClouds != null)
             matClouds.color = Color.Lerp(matClouds.color, cloudColor, Time.deltaTime / fadeTime);
         else
-            Debug.LogWarning("We have no cloud material attached to:" + this.gameObject);
+            Debug.LogWarning("We have no cloud material attached to:" + gameObject);
 
         // Fog settings
         RenderSettings.fogDensity = Mathf.Lerp(RenderSettings.fogDensity, fogDensity, Time.deltaTime / fadeTime);

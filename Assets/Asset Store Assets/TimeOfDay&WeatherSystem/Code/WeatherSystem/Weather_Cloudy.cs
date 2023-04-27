@@ -22,7 +22,7 @@ public class Weather_Cloudy : Weather_Base
 
     private void Start()
     {
-        clWeatherController = (Weather_Controller)this.GetComponent(typeof(Weather_Controller));
+        clWeatherController = (Weather_Controller)GetComponent(typeof(Weather_Controller));
 
         if (_bUseMorningFog == false)
             _fFogMorningAmount = _fFogAmount;

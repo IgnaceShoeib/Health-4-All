@@ -11,7 +11,7 @@ public class Weather_Debug : MonoBehaviour
 
 	void Start () 
     {
-        _clWeatherController = (Weather_Controller)this.GetComponent(typeof(Weather_Controller));
+        _clWeatherController = (Weather_Controller)GetComponent(typeof(Weather_Controller));
         _bWeatherDebugOn = false;
 	}
 

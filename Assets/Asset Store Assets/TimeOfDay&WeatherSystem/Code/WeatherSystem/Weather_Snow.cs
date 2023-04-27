@@ -26,7 +26,7 @@ public class Weather_Snow : Weather_Base
 
     private void Start()
     {
-        clWeatherController = (Weather_Controller)this.GetComponent(typeof(Weather_Controller));
+        clWeatherController = (Weather_Controller)GetComponent(typeof(Weather_Controller));
 
         if (_bUseMorningFog == false)
             _fFogMorningAmount = _fFogAmount;
@@ -186,7 +186,7 @@ public class Weather_Snow : Weather_Base
             }
         }
         else
-            Debug.Log("We are missing snow particles on:" + this.gameObject);
+            Debug.Log("We are missing snow particles on:" + gameObject);
 
     }
 

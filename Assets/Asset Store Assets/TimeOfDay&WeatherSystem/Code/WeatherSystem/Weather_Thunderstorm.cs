@@ -186,7 +186,7 @@ public class Weather_Thunderstorm : Weather_Base
 
     private void Start()
     {
-        clWeatherController = (Weather_Controller)this.GetComponent(typeof(Weather_Controller));
+        clWeatherController = (Weather_Controller)GetComponent(typeof(Weather_Controller));
 
         if (_bUseMorningFog == false)
             _fFogMorningAmount = _fFogAmount;
@@ -384,7 +384,7 @@ public class Weather_Thunderstorm : Weather_Base
                     _gLighting.GetComponent<AudioSource>().Play();
                 }
                 else
-                    Debug.Log("You have no thunder sound attached to: " + this.gameObject + " Is this by choice?");
+                    Debug.Log("You have no thunder sound attached to: " + gameObject + " Is this by choice?");
             }
 
             StartCoroutine(ControlLightingLightOnOff());
@@ -422,7 +422,7 @@ public class Weather_Thunderstorm : Weather_Base
             }
         }
         else
-            Debug.Log("We are missing rain particles on: " + this.gameObject + " For weather type: THUNDERSTORM");
+            Debug.Log("We are missing rain particles on: " + gameObject + " For weather type: THUNDERSTORM");
     }
 
     public override void TurnOnSound(GameObject gameobject)

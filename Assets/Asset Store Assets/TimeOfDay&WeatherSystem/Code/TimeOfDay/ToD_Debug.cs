@@ -25,7 +25,7 @@ public class ToD_Debug : MonoBehaviour
 
 	void Start() 
     {
-        _clToDBase = (ToD_Base)this.GetComponent(typeof(ToD_Base));
+        _clToDBase = (ToD_Base)GetComponent(typeof(ToD_Base));
         _bTodDebugOn = false;
         _bMoreDebugInfo = false;
 	}   

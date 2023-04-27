@@ -620,7 +620,7 @@ public class Weather_Base : MonoBehaviour
     public virtual void Init() 
     {
         float CurrentTemprature = Random.Range(_fLowestTemp, _fHighestTemp);
-        this.GetComponent<Weather_Controller>().GetSet_fCurrTemp = CurrentTemprature;
+        GetComponent<Weather_Controller>().GetSet_fCurrTemp = CurrentTemprature;
     }
 	/// <summary>
 	/// Our weather update function. This is the function we call that update all our different weather changes, 

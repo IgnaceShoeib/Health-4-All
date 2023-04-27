@@ -49,7 +49,7 @@ public class Weather_SoundFade : MonoBehaviour
         while (i < 1.0f)
         {
             i += Time.deltaTime * step;
-            this.GetComponent<AudioSource>().volume = Mathf.Lerp(start, end, i);
+            GetComponent<AudioSource>().volume = Mathf.Lerp(start, end, i);
             yield return new WaitForSeconds(step * Time.deltaTime);
         }
     } // IEnumerator end
