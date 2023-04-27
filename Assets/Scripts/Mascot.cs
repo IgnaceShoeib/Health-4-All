@@ -6,12 +6,18 @@ public class Mascot : MonoBehaviour
 	public int FoodValue = 0;
 	public int MaxFoodValue = 10;
 	public int MinFoodValue = -10;
+	public const int ThunderValue = -7;
+	public const int RainValue = -1;
+	public const int CloudyValue = 0;
+	public const int SunValue = 5;
 	public float MinHappinessLength = 0.05f;
 	public float MaxHappinessLength = 0.65f;
 	public GameObject HappinessMeter;
 	public GameObject Leaf;
 
-    private Vector3 initialScale;
+	private Weather_Controller weatherController;
+	private Weather_Controller.WeatherType desiredWeather;
+	private Vector3 initialScale;
 	private Vector3 initialPosition;
 	private AudioSource audioSource; // Reference to the audio source component
 	private Renderer happinessRenderer;
@@ -25,6 +31,10 @@ public class Mascot : MonoBehaviour
 
 	void Start()
 	{
+		//get weather controller
+		weatherController = FindAnyObjectByType<Weather_Controller>();
+		//get current weather
+		desiredWeather = weatherController.en_CurrWeather;
 		//get animator
 		animator = gameObject.GetComponentInParent<Animator>();
 		// get happiness meter material
@@ -52,7 +62,27 @@ public class Mascot : MonoBehaviour
 		audioSource.spatialBlend = 1;
 		audioSource.maxDistance = 10;
 	}
-
+	public void Update()
+	{
+		switch (FoodValue)
+		{
+			case <= ThunderValue:
+				desiredWeather = Weather_Controller.WeatherType.THUNDERSTORM;
+				break;
+			case <= RainValue:
+				desiredWeather = Weather_Controller.WeatherType.RAIN;
+				break;
+			case <= CloudyValue:
+				desiredWeather = Weather_Controller.WeatherType.CLOUDY;
+				break;
+			case >= SunValue:
+				desiredWeather = Weather_Controller.WeatherType.SUN;
+				break;
+		}
+		if (desiredWeather == weatherController.en_CurrWeather)
+			return;
+		weatherController.ExitCurrentWeather((int)desiredWeather);
+	}
 	void OnCollisionEnter(Collision collision)
 	{
 		if (collision.gameObject.GetComponent<Food>() != null)
