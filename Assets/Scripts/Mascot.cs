@@ -1,28 +1,32 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Mascot : MonoBehaviour
 {
-	public int FoodValue = 0;
+	public int FoodValue;
 	public int MaxFoodValue = 10;
 	public int MinFoodValue = -10;
 	public const int ThunderValue = -7;
 	public const int RainValue = -1;
-	public const int CloudyValue = 0;
-	public const int SunValue = 5;
 	public float MinHappinessLength = 0.05f;
 	public float MaxHappinessLength = 0.65f;
+	public float RainAmbientIntensity = 0.5f;
+	public float SunAmbientIntensity = 1f;
+	public float ThunderAmbientIntensity = 0.3f;
 	public GameObject HappinessMeter;
 	public GameObject Leaf;
-
-	private Weather_Controller weatherController;
-	private Weather_Controller.WeatherType desiredWeather;
+	public GameObject Thunder;
+	public GameObject Rain;
+	
 	private Vector3 initialScale;
 	private Vector3 initialPosition;
 	private AudioSource audioSource; // Reference to the audio source component
 	private Renderer happinessRenderer;
 	private Material happinessMaterial;
-    private Renderer renderer;
+	private Material skyboxMaterial;
+	private Renderer renderer;
 	private Material material;
     private Renderer leafRenderer;
     private Material leafMaterial;
@@ -31,10 +35,11 @@ public class Mascot : MonoBehaviour
 
 	void Start()
 	{
-		//get weather controller
-		weatherController = FindAnyObjectByType<Weather_Controller>();
-		//get current weather
-		desiredWeather = weatherController.en_CurrWeather;
+		// Get the Skybox material
+		skyboxMaterial = RenderSettings.skybox;
+		// Make a new instance of the material so that we don't modify the global skybox material
+		skyboxMaterial = new Material(skyboxMaterial);
+		RenderSettings.skybox = skyboxMaterial;
 		//get animator
 		animator = gameObject.GetComponentInParent<Animator>();
 		// get happiness meter material
@@ -62,48 +67,113 @@ public class Mascot : MonoBehaviour
 		audioSource.spatialBlend = 1;
 		audioSource.maxDistance = 10;
 	}
-	public void Update()
+	void OnCollisionEnter(Collision collision)
+	{
+		if (collision.gameObject.GetComponent<Food>() == null) return;
+		var currentScaleY = HappinessMeter.transform.localScale.y;
+
+		Food food = collision.gameObject.GetComponent<Food>();
+		animator.SetTrigger(food.FoodValue > 0 ? "Jump" : "Sad");
+		FoodValue = Mathf.Clamp(FoodValue + food.FoodValue, MinFoodValue, MaxFoodValue);
+		audioSource.PlayOneShot(food.EatingSound);
+		Destroy(food.gameObject);
+
+		Weather();
+
+		// Scale the happiness meter based on the current food value
+		float scalePercentage = Mathf.InverseLerp(MinFoodValue, MaxFoodValue, FoodValue);
+		float newScaleY = Mathf.Lerp(MinHappinessLength, MaxHappinessLength, scalePercentage);
+
+		var positionDifference =  newScaleY- currentScaleY;
+		StartCoroutine(ChangeHappinessMeterScale(newScaleY, HappinessMeter.transform.localPosition.y + positionDifference, 0.5f));
+	}
+
+	void Weather()
 	{
 		switch (FoodValue)
 		{
 			case <= ThunderValue:
-				desiredWeather = Weather_Controller.WeatherType.THUNDERSTORM;
+				EnableWeatherEvent(Rain);
+				EnableWeatherEvent(Thunder);
+				if (Math.Abs(RenderSettings.ambientIntensity - ThunderAmbientIntensity) > 0.1f)
+				{
+					StartCoroutine(ChangeAmbientIntensity(ThunderAmbientIntensity, 5f));
+				}
 				break;
 			case <= RainValue:
-				desiredWeather = Weather_Controller.WeatherType.RAIN;
+				DisableWeatherEvent(Thunder);
+				EnableWeatherEvent(Rain);
+				if (Math.Abs(RenderSettings.ambientIntensity - RainAmbientIntensity) > 0.1f)
+				{
+					StartCoroutine(ChangeAmbientIntensity(RainAmbientIntensity, 5f));
+				}
 				break;
-			case <= CloudyValue:
-				desiredWeather = Weather_Controller.WeatherType.CLOUDY;
-				break;
-			case >= SunValue:
-				desiredWeather = Weather_Controller.WeatherType.SUN;
+			default:
+				DisableWeatherEvent(Rain);
+				DisableWeatherEvent(Thunder);
+				if (Math.Abs(RenderSettings.ambientIntensity - SunAmbientIntensity) > 0.1f)
+				{
+					StartCoroutine(ChangeAmbientIntensity(SunAmbientIntensity, 5f));
+				}
 				break;
 		}
-		if (desiredWeather == weatherController.en_CurrWeather)
-			return;
-		weatherController.ExitCurrentWeather((int)desiredWeather);
 	}
-	void OnCollisionEnter(Collision collision)
+
+	void EnableWeatherEvent(GameObject gameObject)
 	{
-		if (collision.gameObject.GetComponent<Food>() != null)
+		if (gameObject.activeSelf) return;
+		gameObject.SetActive(true);
+		var sound = gameObject.GetComponent<AudioSource>();
+		sound.volume = 0f;
+		StartCoroutine(FadeIn(sound, 5f));
+	}
+	void DisableWeatherEvent(GameObject gameObject)
+	{
+		if (!gameObject.activeSelf) return;
+		var sound = gameObject.GetComponent<AudioSource>();
+		StartCoroutine(FadeOut(sound, 5f, gameObject));
+	}
+	public IEnumerator FadeIn(AudioSource audioSource, float fadeTime)
+	{
+		float currentTime = 0;
+		float startVolume = audioSource.volume;
+
+		while (currentTime < fadeTime)
 		{
-			var currentScaleY = HappinessMeter.transform.localScale.y;
+			currentTime += Time.deltaTime;
+			audioSource.volume = Mathf.Lerp(startVolume, 1f, currentTime / fadeTime);
+			yield return null;
+		}
+	}
+	public IEnumerator ChangeAmbientIntensity(float intensity, float time)
+	{
+		float currentTime = 0;
+		float startIntensity = RenderSettings.ambientIntensity;
 
-			Food food = collision.gameObject.GetComponent<Food>();
-			animator.SetTrigger(food.FoodValue > 0 ? "Jump" : "Sad");
-			FoodValue = Mathf.Clamp(FoodValue + food.FoodValue, MinFoodValue, MaxFoodValue);
-			audioSource.PlayOneShot(food.EatingSound);
-			Destroy(food.gameObject);
-
-			// Scale the happiness meter based on the current food value
-			float scalePercentage = Mathf.InverseLerp(MinFoodValue, MaxFoodValue, FoodValue);
-			float newScaleY = Mathf.Lerp(MinHappinessLength, MaxHappinessLength, scalePercentage);
-
-			var positionDifference =  newScaleY- currentScaleY;
-			StartCoroutine(ChangeHappinessMeterScale(newScaleY, HappinessMeter.transform.localPosition.y + positionDifference, 0.5f));
+		while (currentTime < time)
+		{
+			currentTime += Time.deltaTime;
+			var newIntensity = Mathf.Lerp(startIntensity, intensity, currentTime / time);
+			RenderSettings.ambientIntensity = newIntensity;
+			skyboxMaterial.SetFloat("_Exposure", newIntensity);
+			yield return null;
 		}
 	}
 
+	public IEnumerator FadeOut(AudioSource audioSource, float fadeTime, GameObject gameObject)
+	{
+		float currentTime = 0;
+		float startVolume = audioSource.volume;
+
+		while (currentTime < fadeTime)
+		{
+			currentTime += Time.deltaTime;
+			audioSource.volume = Mathf.Lerp(startVolume, 0f, currentTime / fadeTime);
+			yield return null;
+		}
+		
+		gameObject.SetActive(false);
+	}
 	IEnumerator ChangeHappinessMeterScale(float newScaleY, float newPositionY, float duration)
 	{
 		float initialScaleY = HappinessMeter.transform.localScale.y;
