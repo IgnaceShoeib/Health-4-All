@@ -19,7 +19,8 @@ public class Mascot : MonoBehaviour
 	public GameObject Leaf;
 	public GameObject Thunder;
 	public GameObject Rain;
-	
+
+	private int OrangeFoodEaten;
 	private Vector3 initialScale;
 	private Vector3 initialPosition;
 	private AudioSource audioSource; // Reference to the audio source component
@@ -73,6 +74,14 @@ public class Mascot : MonoBehaviour
 		var currentScaleY = HappinessMeter.transform.localScale.y;
 
 		Food food = collision.gameObject.GetComponent<Food>();
+		if (food.FoodClass == FoodClass.Orange)
+		{
+			OrangeFoodEaten++;
+			if (OrangeFoodEaten >= 3)
+			{
+				food.FoodValue = -1;
+			}
+		}
 		animator.SetTrigger(food.FoodValue > 0 ? "Jump" : "Sad");
 		FoodValue = Mathf.Clamp(FoodValue + food.FoodValue, MinFoodValue, MaxFoodValue);
 		audioSource.PlayOneShot(food.EatingSound);
