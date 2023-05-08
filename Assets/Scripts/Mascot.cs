@@ -5,9 +5,9 @@ using UnityEngine.Rendering.Universal;
 
 public class Mascot : MonoBehaviour
 {
-	public int FoodValue;
-	public int MaxFoodValue = 10;
-	public int MinFoodValue = -10;
+	public float FoodValue;
+	public float MaxFoodValue = 10;
+	public float MinFoodValue = -10;
 	public const int ThunderValue = -7;
 	public const int RainValue = -1;
 	public float MinHappinessLength = 0.05f;
