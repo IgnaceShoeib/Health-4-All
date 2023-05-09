@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7318760147740880083}
   - component: {fileID: 7117764092350370339}
   - component: {fileID: 1243237244748049568}
+  - component: {fileID: -5202688725136614733}
   m_Layer: 0
   m_Name: fried egg
   m_TagString: Untagged
@@ -199,7 +200,7 @@ MonoBehaviour:
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 2
+  m_MovementType: 0
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -251,3 +252,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FoodClass: 1
   EatingSound: {fileID: 0}
+--- !u!114 &-5202688725136614733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2596437456117340479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c854a3582803284aaec41c020adc590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionSounds: []
