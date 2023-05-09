@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bfd3c5aa338feb448962c6da901d424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FoodValue: -2
+  FoodClass: 3
   EatingSound: {fileID: 0}
 --- !u!114 &352304450631505763
 MonoBehaviour:

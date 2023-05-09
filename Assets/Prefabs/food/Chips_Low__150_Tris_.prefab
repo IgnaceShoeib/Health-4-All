@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bfd3c5aa338feb448962c6da901d424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FoodValue: -5
+  FoodClass: 3
   EatingSound: {fileID: 8300000, guid: b61c302c04983e841b197c2d36d21337, type: 3}
 --- !u!114 &663607405030425156
 MonoBehaviour:
