@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3074265973473972628}
   - component: {fileID: 1892243345451044570}
   m_Layer: 0
-  m_Name: pie
+  m_Name: Pie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

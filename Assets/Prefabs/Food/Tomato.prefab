@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1745158877623844349}
   - component: {fileID: 1459002505818796261}
   m_Layer: 0
-  m_Name: Tomato_Low__359_Tris_
+  m_Name: Tomato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3179640695503817738
+--- !u!1 &2596437456117340479
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,51 +8,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3185562345289527808}
-  - component: {fileID: 3196515642798106664}
-  - component: {fileID: 3202231763365419202}
-  - component: {fileID: 3179640695503817737}
-  - component: {fileID: 3179640695503817736}
-  - component: {fileID: 3179640695503817742}
-  - component: {fileID: 3179640695503817743}
-  - component: {fileID: 3179640695503817740}
+  - component: {fileID: 2086126682928500791}
+  - component: {fileID: 4407306992725988729}
+  - component: {fileID: 5710184252190966227}
+  - component: {fileID: 7318760147740880083}
+  - component: {fileID: 7117764092350370339}
+  - component: {fileID: 1243237244748049568}
+  - component: {fileID: -5202688725136614733}
   m_Layer: 0
-  m_Name: BeerBottle_Low__406_Tris_
+  m_Name: FriedEgg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3185562345289527808
+--- !u!4 &2086126682928500791
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3179640695503817738}
-  m_LocalRotation: {x: -6.123234e-17, y: 1, z: -6.123234e-17, w: -6.123234e-17}
-  m_LocalPosition: {x: -3.18, y: -5.1, z: 3.08}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_GameObject: {fileID: 2596437456117340479}
+  m_LocalRotation: {x: -0.64184326, y: -0.2967108, z: -0.2967108, w: 0.64184326}
+  m_LocalPosition: {x: 51.653, y: -3.646, z: -13.195}
+  m_LocalScale: {x: 1.6826824, y: 1.6826826, z: 1.6826829}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3196515642798106664
+--- !u!33 &4407306992725988729
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3179640695503817738}
-  m_Mesh: {fileID: 4300004, guid: 53340ba17618e5d4fa6794a544d253eb, type: 3}
---- !u!23 &3202231763365419202
+  m_GameObject: {fileID: 2596437456117340479}
+  m_Mesh: {fileID: 8986953824184334203, guid: 0c2683b7893eb3d4b8d4a249c865596f, type: 3}
+--- !u!23 &5710184252190966227
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3179640695503817738}
+  m_GameObject: {fileID: 2596437456117340479}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -66,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 72cb50f89354da94c8aaa1dc70cbccbf, type: 2}
+  - {fileID: 2100000, guid: 40bcd070c6fe6b14fa2624119247e70b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -78,7 +77,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
+  m_StitchLightmapSeams: 1
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -88,27 +87,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3179640695503817737
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3179640695503817738}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300004, guid: 53340ba17618e5d4fa6794a544d253eb, type: 3}
---- !u!54 &3179640695503817736
+--- !u!54 &7318760147740880083
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3179640695503817738}
+  m_GameObject: {fileID: 2596437456117340479}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -118,27 +103,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3179640695503817742
+--- !u!114 &7117764092350370339
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3179640695503817738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bfd3c5aa338feb448962c6da901d424, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FoodClass: 3
-  EatingSound: {fileID: 8300000, guid: bceea135215af3a43bf369f7feaea010, type: 3}
---- !u!114 &3179640695503817743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3179640695503817738}
+  m_GameObject: {fileID: 2596437456117340479}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
@@ -267,21 +238,30 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!114 &3179640695503817740
+--- !u!114 &1243237244748049568
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3179640695503817738}
+  m_GameObject: {fileID: 2596437456117340479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bfd3c5aa338feb448962c6da901d424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FoodClass: 1
+  EatingSound: {fileID: 0}
+--- !u!114 &-5202688725136614733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2596437456117340479}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c854a3582803284aaec41c020adc590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionSounds:
-  - {fileID: 8300000, guid: ecf0d39d18b04a3418026339d120071f, type: 3}
-  - {fileID: 8300000, guid: e66425772bbf44840b216899f9e21d1c, type: 3}
-  - {fileID: 8300000, guid: 52da0d19ff461e940991cefaa7b117d0, type: 3}
-  - {fileID: 8300000, guid: f2d3c298a8eca56419adf30c9cb54cf5, type: 3}
-  - {fileID: 8300000, guid: cc6c994f247ee164e910157312720acb, type: 3}
+  collisionSounds: []

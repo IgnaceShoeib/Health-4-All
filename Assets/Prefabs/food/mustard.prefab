@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3329251838410268785}
   - component: {fileID: 3329251838410268790}
   m_Layer: 0
-  m_Name: mustard
+  m_Name: Mustard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 2891270298514218651}
   - component: {fileID: 5232051041235338476}
   m_Layer: 0
-  m_Name: burger
+  m_Name: Burger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

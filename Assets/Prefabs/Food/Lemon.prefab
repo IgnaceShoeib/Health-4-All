@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6228269287255729707}
   - component: {fileID: 6228269287255729704}
   m_Layer: 0
-  m_Name: Lemon1_Low__200_Tris_
+  m_Name: Lemon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

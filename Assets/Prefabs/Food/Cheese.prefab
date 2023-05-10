@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1729570742371987571}
   - component: {fileID: 913873513568323341}
   m_Layer: 0
-  m_Name: cheese remastered
+  m_Name: Cheese
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
