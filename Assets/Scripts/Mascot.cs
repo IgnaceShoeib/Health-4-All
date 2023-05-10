@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 
 public class Mascot : MonoBehaviour
 {
@@ -19,6 +19,7 @@ public class Mascot : MonoBehaviour
 	public GameObject Leaf;
 	public GameObject Thunder;
 	public GameObject Rain;
+	public List<FoodCombo> FoodCombos;
 
 	private int OrangeFoodEaten;
 	private Vector3 initialScale;
@@ -33,6 +34,7 @@ public class Mascot : MonoBehaviour
     private Material leafMaterial;
     private Color color;
 	private Animator animator;
+	private FoodCombo foodCombo;
 
 	void Start()
 	{
@@ -67,10 +69,31 @@ public class Mascot : MonoBehaviour
 		// Make sound 3D
 		audioSource.spatialBlend = 1;
 		audioSource.maxDistance = 10;
+
+		// select the initial foodcombo
+		SelectFoodCombo();
 	}
+
+	private void SelectFoodCombo()
+	{
+		if (FoodCombos.Count == 0)
+			return;
+		var randomIndex = UnityEngine.Random.Range(0, FoodCombos.Count);
+		foodCombo = FoodCombos[randomIndex];
+		FoodCombos.RemoveAt(randomIndex);
+		var outline1 = foodCombo.Food1.gameObject.AddComponent<Outline>();
+		var outline2 = foodCombo.Food2.gameObject.AddComponent<Outline>();
+		outline1.OutlineMode = Outline.Mode.OutlineAll;
+		outline2.OutlineMode = Outline.Mode.OutlineAll;
+		outline1.OutlineColor = Color.red;
+		outline2.OutlineColor = Color.red;
+		outline1.OutlineWidth = 10f;
+		outline2.OutlineWidth = 10f;
+	}
+
 	void OnCollisionEnter(Collision collision)
 	{
-		if (collision.gameObject.GetComponent<Food>() == null) return;
+		if (collision.gameObject.GetComponent<Food>() == null || collision.gameObject.GetComponent<Outline>()==null) return;
 		var currentScaleY = HappinessMeter.transform.localScale.y;
 
 		Food food = collision.gameObject.GetComponent<Food>();
@@ -85,7 +108,11 @@ public class Mascot : MonoBehaviour
 		animator.SetTrigger(food.FoodValue > 0 ? "Jump" : "Sad");
 		FoodValue = Mathf.Clamp(FoodValue + food.FoodValue, MinFoodValue, MaxFoodValue);
 		audioSource.PlayOneShot(food.EatingSound);
+
+		Destroy(foodCombo.Food1.gameObject.GetComponent<Outline>());
+		Destroy(foodCombo.Food2.gameObject.GetComponent<Outline>());
 		Destroy(food.gameObject);
+		SelectFoodCombo();
 
 		Weather();
 
