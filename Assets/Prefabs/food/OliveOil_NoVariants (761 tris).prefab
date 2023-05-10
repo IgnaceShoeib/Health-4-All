@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bfd3c5aa338feb448962c6da901d424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FoodValue: 2
+  FoodClass: 0
   EatingSound: {fileID: 8300000, guid: bceea135215af3a43bf369f7feaea010, type: 3}
 --- !u!114 &3530656844585352551
 MonoBehaviour:
@@ -227,7 +227,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
