@@ -5,7 +5,7 @@ public class CollisionSound : MonoBehaviour
 	public AudioClip[] collisionSounds; // An array of audio clips for collision sounds
 	private AudioSource audioSource; // Reference to the audio source component
 
-	private void Start()
+	private void Awake()
 	{
 		// Try to get an existing AudioSource component on the same object
 		audioSource = GetComponent<AudioSource>();
