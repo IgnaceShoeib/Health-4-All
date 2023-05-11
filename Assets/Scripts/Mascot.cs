@@ -1,7 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Mascot : MonoBehaviour
 {
@@ -19,6 +22,7 @@ public class Mascot : MonoBehaviour
 	public GameObject Leaf;
 	public GameObject Thunder;
 	public GameObject Rain;
+	public GameObject[] Bubbles;
 	public List<FoodCombo> FoodCombos;
 
 	private int OrangeFoodEaten;
@@ -77,18 +81,44 @@ public class Mascot : MonoBehaviour
 	private void SelectFoodCombo()
 	{
 		if (FoodCombos.Count == 0)
+		{
+			for (int i = 0; i < Bubbles.Length; i++)
+			{
+				Bubbles[i].SetActive(false);
+			}
 			return;
+		}
 		var randomIndex = UnityEngine.Random.Range(0, FoodCombos.Count);
 		foodCombo = FoodCombos[randomIndex];
+
+
+		MakeBubbleFood(0, 0);
+		MakeBubbleFood(1, 1);
+
 		FoodCombos.RemoveAt(randomIndex);
-		var outline1 = foodCombo.Food1.gameObject.AddComponent<Outline>();
-		var outline2 = foodCombo.Food2.gameObject.AddComponent<Outline>();
+		var outline1 = foodCombo.Food[0].gameObject.AddComponent<Outline>();
+		var outline2 = foodCombo.Food[1].gameObject.AddComponent<Outline>();
 		outline1.OutlineMode = Outline.Mode.OutlineAll;
 		outline2.OutlineMode = Outline.Mode.OutlineAll;
 		outline1.OutlineColor = Color.red;
 		outline2.OutlineColor = Color.red;
 		outline1.OutlineWidth = 10f;
 		outline2.OutlineWidth = 10f;
+	}
+
+	private void MakeBubbleFood(int food, int bubble)
+	{
+		if (Bubbles[bubble].transform.childCount > 0)
+			Destroy(Bubbles[bubble].transform.GetChild(0).gameObject);
+		var bubblefood = Instantiate(foodCombo.Food[food].gameObject);
+		bubblefood.transform.parent = Bubbles[bubble].transform;
+		bubblefood.transform.localPosition = foodCombo.BubblePosition[food];
+		bubblefood.transform.localScale = foodCombo.BubbleScale[food];
+		bubblefood.transform.localEulerAngles = foodCombo.BubbleRotation[food];
+		Destroy(bubblefood.GetComponent<Food>());
+		Destroy(bubblefood.GetComponent<Collider>());
+		Destroy(bubblefood.GetComponent<XRGrabInteractable>());
+		Destroy(bubblefood.GetComponent<Rigidbody>());
 	}
 
 	void OnCollisionEnter(Collision collision)
@@ -109,8 +139,8 @@ public class Mascot : MonoBehaviour
 		FoodValue = Mathf.Clamp(FoodValue + food.FoodValue, MinFoodValue, MaxFoodValue);
 		audioSource.PlayOneShot(food.EatingSound);
 
-		Destroy(foodCombo.Food1.gameObject.GetComponent<Outline>());
-		Destroy(foodCombo.Food2.gameObject.GetComponent<Outline>());
+		Destroy(foodCombo.Food[0].gameObject.GetComponent<Outline>());
+		Destroy(foodCombo.Food[1].gameObject.GetComponent<Outline>());
 		Destroy(food.gameObject);
 		SelectFoodCombo();
 
