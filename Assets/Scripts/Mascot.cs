@@ -22,7 +22,7 @@ public class Mascot : MonoBehaviour
 	public GameObject Leaf;
 	public GameObject Thunder;
 	public GameObject Rain;
-	public GameObject[] Bubbles;
+	public GameObject Bubble;
 	public List<FoodCombo> FoodCombos;
 
 	private int OrangeFoodEaten;
@@ -82,18 +82,15 @@ public class Mascot : MonoBehaviour
 	{
 		if (FoodCombos.Count == 0)
 		{
-			for (int i = 0; i < Bubbles.Length; i++)
-			{
-				Bubbles[i].SetActive(false);
-			}
+			Bubble.SetActive(false);
 			return;
 		}
 		var randomIndex = UnityEngine.Random.Range(0, FoodCombos.Count);
 		foodCombo = FoodCombos[randomIndex];
 
 
-		MakeBubbleFood(0, 0);
-		MakeBubbleFood(1, 1);
+		MakeBubbleFood(0);
+		MakeBubbleFood(1);
 
 		FoodCombos.RemoveAt(randomIndex);
 		var outline1 = foodCombo.Food[0].gameObject.AddComponent<Outline>();
@@ -106,19 +103,25 @@ public class Mascot : MonoBehaviour
 		outline2.OutlineWidth = 10f;
 	}
 
-	private void MakeBubbleFood(int food, int bubble)
+	private void MakeBubbleFood(int food)
 	{
-		if (Bubbles[bubble].transform.childCount > 0)
-			Destroy(Bubbles[bubble].transform.GetChild(0).gameObject);
+		if (Bubble.transform.childCount > 1)
+		{
+			for (int i = 0; i < Bubble.transform.childCount; i++)
+			{
+				Destroy(Bubble.transform.GetChild(i).gameObject);
+			}
+		}
 		var bubblefood = Instantiate(foodCombo.Food[food].gameObject);
-		bubblefood.transform.parent = Bubbles[bubble].transform;
-		bubblefood.transform.localPosition = foodCombo.BubblePosition[food];
-		bubblefood.transform.localScale = foodCombo.BubbleScale[food];
-		bubblefood.transform.localEulerAngles = foodCombo.BubbleRotation[food];
+		Destroy(bubblefood.GetComponent<CollisionSound>());
 		Destroy(bubblefood.GetComponent<Food>());
 		Destroy(bubblefood.GetComponent<Collider>());
 		Destroy(bubblefood.GetComponent<XRGrabInteractable>());
 		Destroy(bubblefood.GetComponent<Rigidbody>());
+		bubblefood.transform.parent = Bubble.transform;
+		bubblefood.transform.localPosition = foodCombo.BubblePosition[food];
+		bubblefood.transform.localScale = foodCombo.BubbleScale[food];
+		bubblefood.transform.localEulerAngles = foodCombo.BubbleRotation[food];
 	}
 
 	void OnCollisionEnter(Collision collision)
