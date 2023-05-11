@@ -105,7 +105,7 @@ public class Mascot : MonoBehaviour
 
 	private void MakeBubbleFood(int food)
 	{
-		if (Bubble.transform.childCount > 1)
+		if (Bubble.transform.childCount == 2)
 		{
 			for (int i = 0; i < Bubble.transform.childCount; i++)
 			{
