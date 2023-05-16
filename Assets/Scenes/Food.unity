@@ -6174,6 +6174,7 @@ Transform:
   - {fileID: 543450652407154822}
   - {fileID: 543450652126022204}
   - {fileID: 5293750888070481995}
+  - {fileID: 1878051593}
   m_Father: {fileID: 1119766362}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6270,6 +6271,108 @@ Transform:
   m_Father: {fileID: 1119766362}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1878051592
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1227348497}
+    m_Modifications:
+    - target: {fileID: 3023458388834765609, guid: 8c352f1e1b33386479cdbd630d80ab63,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 47
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023458388834765609, guid: 8c352f1e1b33386479cdbd630d80ab63,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023458388834765609, guid: 8c352f1e1b33386479cdbd630d80ab63,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023458388834765609, guid: 8c352f1e1b33386479cdbd630d80ab63,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023458388834765609, guid: 8c352f1e1b33386479cdbd630d80ab63,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -43.631
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023458388834765609, guid: 8c352f1e1b33386479cdbd630d80ab63,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.155
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023458388834765609, guid: 8c352f1e1b33386479cdbd630d80ab63,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -45.181
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023458388834765609, guid: 8c352f1e1b33386479cdbd630d80ab63,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.08055097
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023458388834765609, guid: 8c352f1e1b33386479cdbd630d80ab63,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023458388834765609, guid: 8c352f1e1b33386479cdbd630d80ab63,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.99675053
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023458388834765609, guid: 8c352f1e1b33386479cdbd630d80ab63,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023458388834765609, guid: 8c352f1e1b33386479cdbd630d80ab63,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023458388834765609, guid: 8c352f1e1b33386479cdbd630d80ab63,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023458388834765609, guid: 8c352f1e1b33386479cdbd630d80ab63,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8191096236677382284, guid: 8c352f1e1b33386479cdbd630d80ab63,
+        type: 3}
+      propertyPath: m_Name
+      value: Chocolate
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8c352f1e1b33386479cdbd630d80ab63, type: 3}
+--- !u!4 &1878051593 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3023458388834765609, guid: 8c352f1e1b33386479cdbd630d80ab63,
+    type: 3}
+  m_PrefabInstance: {fileID: 1878051592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1878051596 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4645514491827046866, guid: 8c352f1e1b33386479cdbd630d80ab63,
+    type: 3}
+  m_PrefabInstance: {fileID: 1878051592}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bfd3c5aa338feb448962c6da901d424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2030196488
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15444,26 +15547,6 @@ PrefabInstance:
       objectReference: {fileID: 977208316}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
-      propertyPath: FoodCombos.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[3].Food.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[4].Food.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[5].Food.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
       propertyPath: FoodCombos.Array.data[0].Food.Array.data[0]
       value: 
       objectReference: {fileID: 543450652126022205}
@@ -15524,563 +15607,103 @@ PrefabInstance:
       objectReference: {fileID: 5244230521392714030}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
-      propertyPath: FoodCombos.Array.data[3].BubbleScale.Array.size
-      value: 2
+      propertyPath: FoodCombos.Array.data[6].Food.Array.data[0]
+      value: 
+      objectReference: {fileID: 4978308220126728871}
+    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
+        type: 3}
+      propertyPath: FoodCombos.Array.data[6].Food.Array.data[1]
+      value: 
+      objectReference: {fileID: 1878051596}
+    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
+        type: 3}
+      propertyPath: FoodCombos.Array.data[6].BubbleScale.Array.data[0].x
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
-      propertyPath: FoodCombos.Array.data[4].BubbleScale.Array.size
-      value: 2
+      propertyPath: FoodCombos.Array.data[6].BubbleScale.Array.data[0].y
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
-      propertyPath: FoodCombos.Array.data[5].BubbleScale.Array.size
-      value: 2
+      propertyPath: FoodCombos.Array.data[6].BubbleScale.Array.data[0].z
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
-      propertyPath: FoodCombos.Array.data[3].BubblePosition.Array.size
-      value: 2
+      propertyPath: FoodCombos.Array.data[6].BubbleScale.Array.data[1].x
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
-      propertyPath: FoodCombos.Array.data[3].BubbleRotation.Array.size
-      value: 2
+      propertyPath: FoodCombos.Array.data[6].BubbleScale.Array.data[1].y
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
-      propertyPath: FoodCombos.Array.data[4].BubblePosition.Array.size
-      value: 2
+      propertyPath: FoodCombos.Array.data[6].BubbleScale.Array.data[1].z
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
-      propertyPath: FoodCombos.Array.data[4].BubbleRotation.Array.size
-      value: 2
+      propertyPath: FoodCombos.Array.data[6].BubblePosition.Array.data[0].x
+      value: 1.67
       objectReference: {fileID: 0}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
-      propertyPath: FoodCombos.Array.data[5].BubblePosition.Array.size
-      value: 2
+      propertyPath: FoodCombos.Array.data[6].BubblePosition.Array.data[0].y
+      value: -0.64
       objectReference: {fileID: 0}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
-      propertyPath: FoodCombos.Array.data[5].BubbleRotation.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[0].BubbleScale.Array.data[0].x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[0].BubbleScale.Array.data[0].y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[0].BubbleScale.Array.data[0].z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[0].BubbleScale.Array.data[1].x
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[0].BubbleScale.Array.data[1].y
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[0].BubbleScale.Array.data[1].z
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[1].BubbleScale.Array.data[0].x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[1].BubbleScale.Array.data[0].y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[1].BubbleScale.Array.data[0].z
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[1].BubbleScale.Array.data[1].x
-      value: 0.375
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[1].BubbleScale.Array.data[1].y
-      value: 0.375
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[1].BubbleScale.Array.data[1].z
-      value: 0.375
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[2].BubbleScale.Array.data[0].x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[2].BubbleScale.Array.data[0].y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[2].BubbleScale.Array.data[0].z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[2].BubbleScale.Array.data[1].x
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[2].BubbleScale.Array.data[1].y
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[2].BubbleScale.Array.data[1].z
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[3].BubbleScale.Array.data[0].x
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[3].BubbleScale.Array.data[0].y
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[3].BubbleScale.Array.data[0].z
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[3].BubbleScale.Array.data[1].x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[3].BubbleScale.Array.data[1].y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[3].BubbleScale.Array.data[1].z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[4].BubbleScale.Array.data[0].x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[4].BubbleScale.Array.data[0].y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[4].BubbleScale.Array.data[0].z
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[4].BubbleScale.Array.data[1].x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[4].BubbleScale.Array.data[1].y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[4].BubbleScale.Array.data[1].z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[5].BubbleScale.Array.data[0].x
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[5].BubbleScale.Array.data[0].y
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[5].BubbleScale.Array.data[0].z
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[5].BubbleScale.Array.data[1].x
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[5].BubbleScale.Array.data[1].y
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[5].BubbleScale.Array.data[1].z
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[0].BubblePosition.Array.data[0].x
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[0].BubblePosition.Array.data[0].y
-      value: -0.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[0].BubblePosition.Array.data[0].z
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[0].BubblePosition.Array.data[1].y
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[0].BubbleRotation.Array.data[0].x
+      propertyPath: FoodCombos.Array.data[6].BubblePosition.Array.data[0].z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
-      propertyPath: FoodCombos.Array.data[0].BubbleRotation.Array.data[0].y
+      propertyPath: FoodCombos.Array.data[6].BubblePosition.Array.data[1].x
+      value: -2.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
+        type: 3}
+      propertyPath: FoodCombos.Array.data[6].BubblePosition.Array.data[1].y
+      value: -0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
+        type: 3}
+      propertyPath: FoodCombos.Array.data[6].BubblePosition.Array.data[1].z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
-      propertyPath: FoodCombos.Array.data[0].BubbleRotation.Array.data[0].z
-      value: -24.95
+      propertyPath: FoodCombos.Array.data[6].BubbleRotation.Array.data[0].x
+      value: -71.87
       objectReference: {fileID: 0}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
-      propertyPath: FoodCombos.Array.data[0].BubbleRotation.Array.data[1].x
+      propertyPath: FoodCombos.Array.data[6].BubbleRotation.Array.data[0].y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
+        type: 3}
+      propertyPath: FoodCombos.Array.data[6].BubbleRotation.Array.data[0].z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
-      propertyPath: FoodCombos.Array.data[0].BubbleRotation.Array.data[1].y
-      value: 180
+      propertyPath: FoodCombos.Array.data[6].BubbleRotation.Array.data[1].x
+      value: -66
       objectReference: {fileID: 0}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
-      propertyPath: FoodCombos.Array.data[0].BubbleRotation.Array.data[1].z
-      value: 24.36
+      propertyPath: FoodCombos.Array.data[6].BubbleRotation.Array.data[1].y
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
-      propertyPath: FoodCombos.Array.data[1].BubblePosition.Array.data[0].x
-      value: 1.864
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[1].BubblePosition.Array.data[0].y
-      value: -1.394
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[1].BubblePosition.Array.data[0].z
-      value: -2.696
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[1].BubblePosition.Array.data[1].x
-      value: -1.975
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[1].BubblePosition.Array.data[1].y
-      value: 1.73
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[1].BubblePosition.Array.data[1].z
-      value: 0.157
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[1].BubbleRotation.Array.data[0].x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[1].BubbleRotation.Array.data[0].y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[1].BubbleRotation.Array.data[0].z
-      value: 27.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[1].BubbleRotation.Array.data[1].x
-      value: 8.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[1].BubbleRotation.Array.data[1].y
-      value: 165.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[1].BubbleRotation.Array.data[1].z
-      value: 19.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[2].BubblePosition.Array.data[0].x
-      value: 2.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[2].BubblePosition.Array.data[0].y
-      value: 0.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[2].BubblePosition.Array.data[0].z
-      value: 0.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[2].BubblePosition.Array.data[1].x
-      value: -2.258
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[2].BubblePosition.Array.data[1].y
-      value: 1.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[2].BubblePosition.Array.data[1].z
-      value: 0.159
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[2].BubbleRotation.Array.data[0].x
-      value: -40.854
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[2].BubbleRotation.Array.data[0].y
-      value: -261.382
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[2].BubbleRotation.Array.data[0].z
-      value: 101.841
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[2].BubbleRotation.Array.data[1].x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[2].BubbleRotation.Array.data[1].y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[2].BubbleRotation.Array.data[1].z
-      value: -25.57
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[3].BubblePosition.Array.data[0].x
-      value: 3.641
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[3].BubblePosition.Array.data[0].y
-      value: 3.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[3].BubblePosition.Array.data[0].z
-      value: 0.831
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[3].BubblePosition.Array.data[1].x
-      value: -1.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[3].BubblePosition.Array.data[1].y
-      value: 0.959
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[3].BubblePosition.Array.data[1].z
-      value: -0.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[3].BubbleRotation.Array.data[0].y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[3].BubbleRotation.Array.data[0].z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[3].BubbleRotation.Array.data[1].x
-      value: -60.337
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[3].BubbleRotation.Array.data[1].y
-      value: -18.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[3].BubbleRotation.Array.data[1].z
-      value: -54.672
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[4].BubblePosition.Array.data[0].x
-      value: 2.26
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[4].BubblePosition.Array.data[0].y
-      value: 0.88
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[4].BubblePosition.Array.data[0].z
-      value: -0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[4].BubblePosition.Array.data[1].x
-      value: -2.159
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[4].BubblePosition.Array.data[1].y
-      value: 0.922
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[4].BubblePosition.Array.data[1].z
-      value: 1.164
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[4].BubbleRotation.Array.data[0].y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[4].BubbleRotation.Array.data[0].z
-      value: 35.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[4].BubbleRotation.Array.data[1].x
-      value: 4.891
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[4].BubbleRotation.Array.data[1].y
-      value: -182.962
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[4].BubbleRotation.Array.data[1].z
-      value: 111.853
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[5].BubblePosition.Array.data[0].x
-      value: 2.26
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[5].BubblePosition.Array.data[0].y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[5].BubblePosition.Array.data[0].z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[5].BubblePosition.Array.data[1].x
-      value: -2.159
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[5].BubblePosition.Array.data[1].y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[5].BubblePosition.Array.data[1].z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[5].BubbleRotation.Array.data[0].y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[5].BubbleRotation.Array.data[0].z
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[5].BubbleRotation.Array.data[1].x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[5].BubbleRotation.Array.data[1].y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[5].BubbleRotation.Array.data[1].z
-      value: 35
+      propertyPath: FoodCombos.Array.data[6].BubbleRotation.Array.data[1].z
+      value: -86.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 324e2767166da43469c4d628a09b9ef9, type: 3}
@@ -16165,6 +15788,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3943879076681869664}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4978308220126728871 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8335593280993000391, guid: 08179e290fc67f84f8c88f9086ce18ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 3943879076681869664}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bfd3c5aa338feb448962c6da901d424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5080254128911372192
 PrefabInstance:
   m_ObjectHideFlags: 0

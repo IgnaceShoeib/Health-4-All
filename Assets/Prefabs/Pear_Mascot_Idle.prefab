@@ -726,38 +726,86 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     BubblePosition:
-    - {x: 1.61, y: 0.28, z: 0.56}
-    - {x: -2.06, y: 2.6, z: -0.3}
+    - {x: 1.2, y: -0.65, z: 0.01}
+    - {x: -2.06, y: 1.25, z: -0.3}
     BubbleRotation:
-    - {x: -14.42, y: 15.37, z: -2.57}
-    - {x: 0.745, y: -180, z: -29.03}
+    - {x: 0, y: 0, z: -24.95}
+    - {x: 0, y: 180, z: 24.36}
     BubbleScale:
-    - {x: 1, y: 1, z: 1}
-    - {x: 7.5, y: 7.5, z: 7.5}
+    - {x: 0.5, y: 0.5, z: 0.5}
+    - {x: 40, y: 40, z: 40}
   - Food:
     - {fileID: 0}
     - {fileID: 0}
     BubblePosition:
-    - {x: 1.59, y: 0.55, z: 0.04}
-    - {x: -2, y: 1, z: -0.7}
+    - {x: 1.864, y: -1.394, z: -2.696}
+    - {x: -1.975, y: 1.73, z: 0.157}
     BubbleRotation:
-    - {x: 116.48, y: -155.83, z: -57.376}
-    - {x: 1.903, y: -2.699, z: -24.92}
+    - {x: 0, y: 180, z: 27.52}
+    - {x: 8.7, y: 165.3, z: 19.01}
+    BubbleScale:
+    - {x: 0.2, y: 0.2, z: 0.2}
+    - {x: 0.375, y: 0.375, z: 0.375}
+  - Food:
+    - {fileID: 0}
+    - {fileID: 0}
+    BubblePosition:
+    - {x: 2.63, y: 0.97, z: 0.34}
+    - {x: -2.258, y: 1.58, z: 0.159}
+    BubbleRotation:
+    - {x: -40.854, y: -261.382, z: 101.841}
+    - {x: 0, y: 0, z: -25.57}
     BubbleScale:
     - {x: 1, y: 1, z: 1}
+    - {x: 40, y: 40, z: 40}
+  - Food:
+    - {fileID: 0}
+    - {fileID: 0}
+    BubblePosition:
+    - {x: 3.641, y: 3.54, z: 0.831}
+    - {x: -1.4, y: 0.959, z: -0.22}
+    BubbleRotation:
+    - {x: -20.62, y: 180, z: 0}
+    - {x: -60.337, y: -18.75, z: -54.672}
+    BubbleScale:
+    - {x: 200, y: 200, z: 200}
+    - {x: 1, y: 1, z: 1}
+  - Food:
+    - {fileID: 0}
+    - {fileID: 0}
+    BubblePosition:
+    - {x: 2.26, y: 0.88, z: -0.8}
+    - {x: -2.159, y: 0.922, z: 1.164}
+    BubbleRotation:
+    - {x: -20.62, y: 180, z: 35.92}
+    - {x: 4.891, y: -182.962, z: 111.853}
+    BubbleScale:
     - {x: 0.3, y: 0.3, z: 0.3}
+    - {x: 1, y: 1, z: 1}
   - Food:
     - {fileID: 0}
     - {fileID: 0}
     BubblePosition:
-    - {x: -2.78, y: 0.499, z: 0.67}
-    - {x: 2.58, y: 0.28, z: 0.33}
+    - {x: 2.26, y: 0, z: 0}
+    - {x: -2.159, y: 0, z: 0}
     BubbleRotation:
-    - {x: -20.62, y: -189.077, z: -12.555}
-    - {x: 0.574, y: 0.037, z: 0.534}
+    - {x: -20.62, y: 180, z: 35}
+    - {x: 0, y: 180, z: 35}
     BubbleScale:
-    - {x: 1, y: 1, z: 1}
-    - {x: 1, y: 1, z: 1}
+    - {x: 200, y: 200, z: 200}
+    - {x: 200, y: 200, z: 200}
+  - Food:
+    - {fileID: 0}
+    - {fileID: 0}
+    BubblePosition:
+    - {x: 2.26, y: 0.499, z: 0.67}
+    - {x: -2.159, y: 0.28, z: 0.33}
+    BubbleRotation:
+    - {x: -20.62, y: 180, z: 35}
+    - {x: 0.574, y: 180, z: 35}
+    BubbleScale:
+    - {x: 200, y: 200, z: 200}
+    - {x: 200, y: 200, z: 200}
 --- !u!1 &3969716220271483245
 GameObject:
   m_ObjectHideFlags: 0

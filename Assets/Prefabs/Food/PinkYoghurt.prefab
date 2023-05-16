@@ -279,5 +279,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bfd3c5aa338feb448962c6da901d424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FoodClass: 1
+  FoodClass: 2
   EatingSound: {fileID: 0}
