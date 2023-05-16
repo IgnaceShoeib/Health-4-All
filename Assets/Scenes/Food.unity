@@ -12353,18 +12353,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5080254128911372192}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &764751260208794752 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6782350963166995619, guid: 9e07099cbb217514cb8635585aa4a785,
-    type: 3}
-  m_PrefabInstance: {fileID: 5080254128911372192}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bfd3c5aa338feb448962c6da901d424, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &812340237183541007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15464,7 +15452,7 @@ PrefabInstance:
         type: 3}
       propertyPath: FoodCombos.Array.data[2].Food.Array.data[0]
       value: 
-      objectReference: {fileID: 764751260208794752}
+      objectReference: {fileID: 5293750888070482000}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
       propertyPath: FoodCombos.Array.data[2].Food.Array.data[1]
@@ -15558,17 +15546,17 @@ PrefabInstance:
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
       propertyPath: FoodCombos.Array.data[2].BubbleScale.Array.data[0].x
-      value: 150
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
       propertyPath: FoodCombos.Array.data[2].BubbleScale.Array.data[0].y
-      value: 150
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
       propertyPath: FoodCombos.Array.data[2].BubbleScale.Array.data[0].z
-      value: 150
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
@@ -15758,17 +15746,17 @@ PrefabInstance:
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
       propertyPath: FoodCombos.Array.data[2].BubbleRotation.Array.data[0].x
-      value: 0
+      value: -40.854
       objectReference: {fileID: 0}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
       propertyPath: FoodCombos.Array.data[2].BubbleRotation.Array.data[0].y
-      value: 180
+      value: -261.382
       objectReference: {fileID: 0}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
       propertyPath: FoodCombos.Array.data[2].BubbleRotation.Array.data[0].z
-      value: 24.83
+      value: 101.841
       objectReference: {fileID: 0}
     - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
@@ -16219,6 +16207,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2704180375071675276}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5293750888070482000 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2182725770253880469, guid: c174461bff3199d47a91070c1cc45b2d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2704180375071675276}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bfd3c5aa338feb448962c6da901d424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5344396278641639558 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5796342477470323902, guid: ea71cba3fb7c37940a9184b78a4fb0e5,
