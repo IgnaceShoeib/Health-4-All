@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using Unity.XR.CoreUtils;
 using UnityEngine;
@@ -24,6 +25,7 @@ public class Mascot : MonoBehaviour
 	public GameObject Thunder;
 	public GameObject Rain;
 	public GameObject Bubble;
+	public GameObject Score;
 	public List<FoodCombo> FoodCombos;
 
 	private int EatenFoods;
@@ -39,6 +41,7 @@ public class Mascot : MonoBehaviour
     private Renderer leafRenderer;
     private Material leafMaterial;
     private Color color;
+	private Color happinessColor;
 	private Animator animator;
 	private FoodCombo foodCombo;
 
@@ -85,6 +88,11 @@ public class Mascot : MonoBehaviour
 		if (FoodCombos.Count == 0 | EatenFoods == MaxFoods)
 		{
 			Bubble.SetActive(false);
+			float score = FoodValue;
+			score = (score - MinFoodValue) / (MaxFoodValue - MinFoodValue) * 100;
+			Score.GetComponent<TextMeshProUGUI>().text = Mathf.RoundToInt(score).ToString();
+			Score.GetComponent<TextMeshProUGUI>().color = happinessColor;
+			Score.transform.parent.gameObject.SetActive(true);
 			return;
 		}
 		var randomIndex = UnityEngine.Random.Range(0, FoodCombos.Count);
@@ -261,8 +269,8 @@ public class Mascot : MonoBehaviour
 			HappinessMeter.transform.localPosition = new Vector3(initialPosition.x, currentPositionY, initialPosition.z);
 			// Update the emission color based on the happiness meter's scale
 			float colorPercentage = Mathf.InverseLerp(MinHappinessLength, MaxHappinessLength, currentScaleY);
-			Color emissionColor = Color.Lerp(Color.red, Color.green, colorPercentage);
-			happinessMaterial.SetColor("_EmissionColor", emissionColor);
+			happinessColor = Color.Lerp(Color.red, Color.green, colorPercentage);
+			happinessMaterial.SetColor("_EmissionColor", happinessColor);
 			// Update the mascot's material
             if (colorPercentage <= 0.5f)
             {

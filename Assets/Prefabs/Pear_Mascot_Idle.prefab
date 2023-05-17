@@ -1251,6 +1251,7 @@ MonoBehaviour:
   Thunder: {fileID: 0}
   Rain: {fileID: 0}
   Bubble: {fileID: 4675313036572080576}
+  Score: {fileID: 434324389}
   FoodCombos:
   - Food:
     - {fileID: 0}
