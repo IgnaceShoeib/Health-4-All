@@ -7,9 +7,13 @@ public class Food : MonoBehaviour
 	[NonSerialized]
 	public float FoodValue = 0;
 	public AudioClip EatingSound;
+	private Vector3 position;
+	private Quaternion rotation;
 
 	void Start()
 	{
+		position = transform.position;
+		rotation = transform.rotation;
 		// Set the food value based on the food class
 		switch (FoodClass)
 		{
@@ -26,5 +30,13 @@ public class Food : MonoBehaviour
 				FoodValue = -2;
 				break;
 		}
+	}
+
+	void Update()
+	{
+		if (!(transform.position.y < -5)) return;
+		GetComponent<Rigidbody>().velocity = Vector3.zero;
+		transform.rotation = rotation;
+		transform.position = position;
 	}
 }
