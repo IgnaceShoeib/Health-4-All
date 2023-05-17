@@ -2,14 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
-using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class Mascot : MonoBehaviour
 {
-	public int MaxFoods = 5;
 	public float FoodValue;
 	public float MaxFoodValue = 10;
 	public float MinFoodValue = -10;
@@ -28,7 +25,7 @@ public class Mascot : MonoBehaviour
 	public GameObject Score;
 	public List<FoodCombo> FoodCombos;
 
-	private int EatenFoods;
+	private int AccumulatedFoodValue;
 	private int OrangeFoodEaten;
 	private Vector3 initialScale;
 	private Vector3 initialPosition;
@@ -85,7 +82,7 @@ public class Mascot : MonoBehaviour
 
 	private void SelectFoodCombo()
 	{
-		if (FoodCombos.Count == 0 | EatenFoods == MaxFoods)
+		if (FoodCombos.Count == 0 | AccumulatedFoodValue >= MaxFoodValue)
 		{
 			Bubble.SetActive(false);
 			float score = FoodValue;
@@ -98,6 +95,10 @@ public class Mascot : MonoBehaviour
 		var randomIndex = UnityEngine.Random.Range(0, FoodCombos.Count);
 		foodCombo = FoodCombos[randomIndex];
 
+		if (foodCombo.Food[0].FoodValue >= foodCombo.Food[1].FoodValue)
+			AccumulatedFoodValue += (int)foodCombo.Food[0].FoodValue;
+		else
+			AccumulatedFoodValue += (int)foodCombo.Food[1].FoodValue;
 
 		MakeBubbleFood(0);
 		MakeBubbleFood(1);
@@ -140,7 +141,6 @@ public class Mascot : MonoBehaviour
 		var currentScaleY = HappinessMeter.transform.localScale.y;
 
 		Food food = collision.gameObject.GetComponent<Food>();
-		EatenFoods++;
 		if (food.FoodClass == FoodClass.Orange)
 		{
 			OrangeFoodEaten++;

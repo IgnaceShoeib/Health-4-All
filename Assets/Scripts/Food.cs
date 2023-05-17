@@ -10,7 +10,7 @@ public class Food : MonoBehaviour
 	private Vector3 position;
 	private Quaternion rotation;
 
-	void Start()
+	void Awake()
 	{
 		position = transform.position;
 		rotation = transform.rotation;
