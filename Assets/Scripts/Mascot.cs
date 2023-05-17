@@ -8,6 +8,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Mascot : MonoBehaviour
 {
+	public int MaxFoods = 5;
 	public float FoodValue;
 	public float MaxFoodValue = 10;
 	public float MinFoodValue = -10;
@@ -25,6 +26,7 @@ public class Mascot : MonoBehaviour
 	public GameObject Bubble;
 	public List<FoodCombo> FoodCombos;
 
+	private int EatenFoods;
 	private int OrangeFoodEaten;
 	private Vector3 initialScale;
 	private Vector3 initialPosition;
@@ -80,7 +82,7 @@ public class Mascot : MonoBehaviour
 
 	private void SelectFoodCombo()
 	{
-		if (FoodCombos.Count == 0)
+		if (FoodCombos.Count == 0 | EatenFoods == MaxFoods)
 		{
 			Bubble.SetActive(false);
 			return;
@@ -130,6 +132,7 @@ public class Mascot : MonoBehaviour
 		var currentScaleY = HappinessMeter.transform.localScale.y;
 
 		Food food = collision.gameObject.GetComponent<Food>();
+		EatenFoods++;
 		if (food.FoodClass == FoodClass.Orange)
 		{
 			OrangeFoodEaten++;
