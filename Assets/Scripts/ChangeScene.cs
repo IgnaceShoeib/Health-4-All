@@ -6,6 +6,10 @@ public class ChangeScene : MonoBehaviour
     public string sceneName;
     void OnTriggerEnter()
     {
-	    SceneManager.LoadScene(sceneName);
+	    SceneChange(sceneName);
+    }
+    public void SceneChange(string scene)
+    {
+	    SceneManager.LoadScene(scene);
     }
 }
