@@ -17,7 +17,6 @@ public class Mascot : MonoBehaviour
 	public float RainAmbientIntensity = 0.5f;
 	public float SunAmbientIntensity = 1f;
 	public float ThunderAmbientIntensity = 0.3f;
-	public GameObject HappinessMeter;
 	public GameObject Leaf;
 	public GameObject Thunder;
 	public GameObject Rain;
@@ -27,18 +26,14 @@ public class Mascot : MonoBehaviour
 
 	private int AccumulatedFoodValue;
 	private int OrangeFoodEaten;
-	private Vector3 initialScale;
-	private Vector3 initialPosition;
 	private AudioSource audioSource; // Reference to the audio source component
-	private Renderer happinessRenderer;
-	private Material happinessMaterial;
 	private Material skyboxMaterial;
 	private Renderer renderer;
 	private Material material;
     private Renderer leafRenderer;
     private Material leafMaterial;
     private Color color;
-	private Color happinessColor;
+	private Color scoreColor;
 	private Animator animator;
 	private FoodCombo foodCombo;
 
@@ -51,18 +46,12 @@ public class Mascot : MonoBehaviour
 		RenderSettings.skybox = skyboxMaterial;
 		//get animator
 		animator = gameObject.GetComponentInParent<Animator>();
-		// get happiness meter material
-		happinessRenderer = HappinessMeter.GetComponent<Renderer>();
-		happinessMaterial = happinessRenderer.material;
         // get material
         renderer = GetComponent<Renderer>();
         material = renderer.material;
         leafRenderer = Leaf.GetComponent<Renderer>();
         leafMaterial = leafRenderer.material;
         color = material.color;
-        // Store the initial scale and position of the happiness meter
-        initialScale = HappinessMeter.transform.localScale;
-		initialPosition = HappinessMeter.transform.localPosition;
 
 		// Try to get an existing AudioSource component on the same object
 		audioSource = GetComponent<AudioSource>();
@@ -88,7 +77,7 @@ public class Mascot : MonoBehaviour
 			float score = FoodValue;
 			score = (score - MinFoodValue) / (MaxFoodValue - MinFoodValue) * 100;
 			Score.GetComponent<TextMeshProUGUI>().text = Mathf.RoundToInt(score).ToString();
-			Score.GetComponent<TextMeshProUGUI>().color = happinessColor;
+			Score.GetComponent<TextMeshProUGUI>().color = scoreColor;
 			Score.transform.parent.gameObject.SetActive(true);
 			return;
 		}
@@ -138,7 +127,6 @@ public class Mascot : MonoBehaviour
 	void OnCollisionEnter(Collision collision)
 	{
 		if (collision.gameObject.GetComponent<Food>() == null || collision.gameObject.GetComponent<Outline>()==null) return;
-		var currentScaleY = HappinessMeter.transform.localScale.y;
 
 		Food food = collision.gameObject.GetComponent<Food>();
 		if (food.FoodClass == FoodClass.Orange)
@@ -163,9 +151,8 @@ public class Mascot : MonoBehaviour
 		// Scale the happiness meter based on the current food value
 		float scalePercentage = Mathf.InverseLerp(MinFoodValue, MaxFoodValue, FoodValue);
 		float newScaleY = Mathf.Lerp(MinHappinessLength, MaxHappinessLength, scalePercentage);
-
-		var positionDifference =  newScaleY- currentScaleY;
-		StartCoroutine(ChangeHappinessMeterScale(newScaleY, HappinessMeter.transform.localPosition.y + positionDifference, 0.5f));
+		
+		StartCoroutine(ChangeHappinessMeterScale(newScaleY, 0.5f));
 	}
 
 	void Weather()
@@ -254,23 +241,16 @@ public class Mascot : MonoBehaviour
 		
 		gameObject.SetActive(false);
 	}
-	IEnumerator ChangeHappinessMeterScale(float newScaleY, float newPositionY, float duration)
+	IEnumerator ChangeHappinessMeterScale(float newScaleY, float duration)
 	{
-		float initialScaleY = HappinessMeter.transform.localScale.y;
-		float initialPositionY = HappinessMeter.transform.localPosition.y;
 		float elapsedTime = 0f;
 		while (elapsedTime < duration)
 		{
 			elapsedTime += Time.deltaTime;
 			float t = Mathf.Clamp01(elapsedTime / duration);
-			float currentScaleY = Mathf.Lerp(initialScaleY, newScaleY, t);
-			float currentPositionY = Mathf.Lerp(initialPositionY, newPositionY, t);
-			HappinessMeter.transform.localScale = new Vector3(initialScale.x, currentScaleY, initialScale.z);
-			HappinessMeter.transform.localPosition = new Vector3(initialPosition.x, currentPositionY, initialPosition.z);
 			// Update the emission color based on the happiness meter's scale
-			float colorPercentage = Mathf.InverseLerp(MinHappinessLength, MaxHappinessLength, currentScaleY);
-			happinessColor = Color.Lerp(Color.red, Color.green, colorPercentage);
-			happinessMaterial.SetColor("_EmissionColor", happinessColor);
+			float colorPercentage = Mathf.InverseLerp(MinFoodValue, MaxFoodValue, FoodValue);
+			scoreColor = Color.Lerp(Color.red, Color.green, colorPercentage);
 			// Update the mascot's material
             if (colorPercentage <= 0.5f)
             {
