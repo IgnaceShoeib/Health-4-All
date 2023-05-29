@@ -688,6 +688,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f90cb76a78b4dc4c9ad39a947774efb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ActiveGame: 0
+  MaxPoints: 10
+  CurrentPoints: 0
 --- !u!54 &87918332
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2624,6 +2627,53 @@ Transform:
   - {fileID: 488484614}
   m_Father: {fileID: 0}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &455743080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 455743082}
+  - component: {fileID: 455743081}
+  m_Layer: 0
+  m_Name: SportController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &455743081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455743080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91cc99053fd766342ac14a0663f389c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sportGames:
+  - {fileID: 1477345709}
+  - {fileID: 1281584495}
+--- !u!4 &455743082
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455743080}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.189, y: 1.304, z: 1.258}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &455954473
 PrefabInstance:
@@ -7100,10 +7150,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eb8106be145ef344904c8537b5d0f23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ActiveGame: 0
+  MaxPoints: 10
+  CurrentPoints: 0
   down: 0.25
   up: 1.5
-  amount: 15
-  currentAmount: 0
 --- !u!114 &1281584496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9327,8 +9378,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f884196f2ea540441aea91e8058383e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: 0
+  ActiveGame: 0
   MaxPoints: 10
+  CurrentPoints: 0
 --- !u!4 &1477345710
 Transform:
   m_ObjectHideFlags: 0
@@ -10383,6 +10435,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f90cb76a78b4dc4c9ad39a947774efb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ActiveGame: 0
+  MaxPoints: 10
+  CurrentPoints: 0
 --- !u!54 &1773537202
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12038,7 +12093,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1744506374121071231}
   - component: {fileID: 3563847957598811544}
-  - component: {fileID: 3563847957598811545}
   m_Layer: 0
   m_Name: Pear_Mascot_Idle
   m_TagString: Untagged
@@ -12534,19 +12588,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3563847957598811545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1404678749698685125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91cc99053fd766342ac14a0663f389c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  points: 0
 --- !u!1 &3628653154761735426
 GameObject:
   m_ObjectHideFlags: 0
