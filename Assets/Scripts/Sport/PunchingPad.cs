@@ -11,7 +11,6 @@ public class PunchingPad : MonoBehaviour
 	}
 	void OnTriggerEnter(Collider other)
 	{
-		Debug.Log(other.transform.parent.name);
 		if (other.transform.parent.name == HandObjectName)
 			punchingPadController.Hit(name);
 	}

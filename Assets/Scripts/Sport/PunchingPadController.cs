@@ -1,15 +1,19 @@
-using UnityEngine;
-
-public class PunchingPadController : MonoBehaviour
+public class PunchingPadController : SportGame
 {
 	private string lastHit = "";
-	public int points;
-	public int MaxPoints = 10;
 
 	public void Hit(string handName)
 	{
+		if (!ActiveGame)
+			return;
 		if (lastHit == handName) return;
 		lastHit = handName;
-		points++;
+		CurrentPoints++;
+
+		if (CurrentPoints < MaxPoints) return;
+		ActiveGame = false;
+		CurrentPoints = 0;
+		var sportPoints = FindFirstObjectByType<SportPoints>();
+		sportPoints.SwitchGame();
 	}
 }
