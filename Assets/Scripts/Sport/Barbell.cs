@@ -35,7 +35,7 @@ public class Barbell : SportGame
 	    if (CurrentPoints < MaxPoints) return;
 	    ActiveGame = false;
 	    CurrentPoints = 0;
-	    var sportPoints = GetComponentInParent<SportPoints>();
+	    var sportPoints = FindFirstObjectByType<SportPoints>();
 	    sportPoints.SwitchGame();
 	}
 }
