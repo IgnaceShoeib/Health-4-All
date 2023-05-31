@@ -12581,7 +12581,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
@@ -17658,10 +17658,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 493365646, guid: 324e2767166da43469c4d628a09b9ef9, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2373046660941702425, guid: 324e2767166da43469c4d628a09b9ef9,
         type: 3}
       propertyPath: m_RootOrder
@@ -17882,51 +17878,6 @@ PrefabInstance:
       propertyPath: FoodCombos.Array.data[14].Food.Array.data[1]
       value: 
       objectReference: {fileID: 5184306547786171288}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[10].BubbleScale.Array.data[0].x
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[10].BubbleScale.Array.data[0].y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[10].BubbleScale.Array.data[0].z
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[10].BubblePosition.Array.data[0].x
-      value: 2.380016
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[10].BubblePosition.Array.data[0].y
-      value: 1.149999
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[10].BubblePosition.Array.data[0].z
-      value: -0.1299906
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[10].BubbleRotation.Array.data[0].x
-      value: -30.202
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[10].BubbleRotation.Array.data[0].y
-      value: 59.494
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493395852024453406, guid: 324e2767166da43469c4d628a09b9ef9,
-        type: 3}
-      propertyPath: FoodCombos.Array.data[10].BubbleRotation.Array.data[0].z
-      value: -30.438
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 324e2767166da43469c4d628a09b9ef9, type: 3}
 --- !u!4 &4678711653155523921 stripped

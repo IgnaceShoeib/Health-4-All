@@ -22,12 +22,17 @@ public class Mascot : MonoBehaviour
 	public GameObject Rain;
 	public GameObject Bubble;
 	public GameObject Score;
+	public Renderer CrossRenderer;
+	public Renderer CheckRenderer;
 	public List<FoodCombo> FoodCombos;
 
 	private int AccumulatedFoodValue;
 	private int OrangeFoodEaten;
+	private float fadeDuration = 0.5f;
 	private AudioSource audioSource; // Reference to the audio source component
 	private Material skyboxMaterial;
+	private Material checkMaterial;
+	private Material crossMaterial;
 	private Renderer renderer;
 	private Material material;
     private Renderer leafRenderer;
@@ -51,6 +56,8 @@ public class Mascot : MonoBehaviour
         material = renderer.material;
         leafRenderer = Leaf.GetComponent<Renderer>();
         leafMaterial = leafRenderer.material;
+		checkMaterial = CheckRenderer.material;
+		crossMaterial = CrossRenderer.material;
         color = material.color;
 
 		// Try to get an existing AudioSource component on the same object
@@ -138,6 +145,8 @@ public class Mascot : MonoBehaviour
 			}
 		}
 		animator.SetTrigger(food.FoodValue > 0 ? "Jump" : "Sad");
+		StartCoroutine(food.FoodValue > 0 ? FadeMaterial(checkMaterial) : FadeMaterial(crossMaterial));
+
 		FoodValue = Mathf.Clamp(FoodValue + food.FoodValue, MinFoodValue, MaxFoodValue);
 		audioSource.PlayOneShot(food.EatingSound);
 
@@ -148,11 +157,7 @@ public class Mascot : MonoBehaviour
 
 		Weather();
 
-		// Scale the happiness meter based on the current food value
-		float scalePercentage = Mathf.InverseLerp(MinFoodValue, MaxFoodValue, FoodValue);
-		float newScaleY = Mathf.Lerp(MinHappinessLength, MaxHappinessLength, scalePercentage);
-		
-		StartCoroutine(ChangeHappinessMeterScale(newScaleY, 0.5f));
+		StartCoroutine(CalculateColor(0.5f));
 	}
 
 	void Weather()
@@ -241,13 +246,12 @@ public class Mascot : MonoBehaviour
 		
 		gameObject.SetActive(false);
 	}
-	IEnumerator ChangeHappinessMeterScale(float newScaleY, float duration)
+	IEnumerator CalculateColor(float duration)
 	{
 		float elapsedTime = 0f;
 		while (elapsedTime < duration)
 		{
 			elapsedTime += Time.deltaTime;
-			float t = Mathf.Clamp01(elapsedTime / duration);
 			// Update the emission color based on the happiness meter's scale
 			float colorPercentage = Mathf.InverseLerp(MinFoodValue, MaxFoodValue, FoodValue);
 			scoreColor = Color.Lerp(Color.red, Color.green, colorPercentage);
@@ -265,6 +269,47 @@ public class Mascot : MonoBehaviour
                 leafMaterial.color= baseColor;
             }
             yield return null;
+		}
+	}
+	public IEnumerator FadeMaterial(Material material)
+	{
+		// Fade in the material
+		yield return StartCoroutine(FadeMaterialIn(material));
+
+		// Keep the material visible for the specified stay duration
+		yield return new WaitForSeconds(1);
+
+		// Fade out the material
+		yield return StartCoroutine(FadeMaterialOut(material));
+	}
+	private IEnumerator FadeMaterialIn(Material material)
+	{
+		float elapsedTime = 0f;
+		while (elapsedTime < fadeDuration)
+		{
+			// Calculate the current alpha value based on the elapsed time
+			float alpha = Mathf.Lerp(0f, 1f, elapsedTime / fadeDuration);
+
+			// Set the material's color with the updated alpha value
+			material.color = new Color(material.color.r, material.color.g, material.color.b, alpha);
+
+			elapsedTime += Time.deltaTime;
+			yield return null;
+		}
+	}
+	private IEnumerator FadeMaterialOut(Material material)
+	{
+		float elapsedTime = 0f;
+		while (elapsedTime < fadeDuration)
+		{
+			// Calculate the current alpha value based on the elapsed time
+			float alpha = Mathf.Lerp(1f, 0f, elapsedTime / fadeDuration);
+
+			// Set the material's color with the updated alpha value
+			material.color = new Color(material.color.r, material.color.g, material.color.b, alpha);
+
+			elapsedTime += Time.deltaTime;
+			yield return null;
 		}
 	}
 }
