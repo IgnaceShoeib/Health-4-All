@@ -1864,8 +1864,6 @@ MonoBehaviour:
   FoodValue: 0
   MaxFoodValue: 10
   MinFoodValue: -10
-  MinHappinessLength: 0.05
-  MaxHappinessLength: 0.65
   RainAmbientIntensity: 0.5
   SunAmbientIntensity: 1
   ThunderAmbientIntensity: 0.3

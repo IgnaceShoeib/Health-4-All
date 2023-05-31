@@ -12,8 +12,6 @@ public class Mascot : MonoBehaviour
 	public float MinFoodValue = -10;
 	public const int ThunderValue = -7;
 	public const int RainValue = -1;
-	public float MinHappinessLength = 0.05f;
-	public float MaxHappinessLength = 0.65f;
 	public float RainAmbientIntensity = 0.5f;
 	public float SunAmbientIntensity = 1f;
 	public float ThunderAmbientIntensity = 0.3f;
