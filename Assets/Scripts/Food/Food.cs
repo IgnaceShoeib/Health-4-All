@@ -24,7 +24,7 @@ public class Food : MonoBehaviour
 				FoodValue = 1f;
 				break;
 			case FoodClass.Orange:
-				FoodValue = 0.5f;
+				FoodValue = -0.5f;
 				break;
 			case FoodClass.Red:
 				FoodValue = -2;
