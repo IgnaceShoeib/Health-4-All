@@ -99,10 +99,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3529275178843589589}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -116,9 +127,17 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3529275178843589589}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 7efe9a6b8f0200349bf250d45ac41825, type: 3}
@@ -135,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FoodClass: 0
-  EatingSound: {fileID: 8300000, guid: bceea135215af3a43bf369f7feaea010, type: 3}
+  EatingSound: {fileID: 8300000, guid: fd43a5f002b3eaa43812ea7121759ba2, type: 3}
 --- !u!114 &3530656844585352551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,8 +303,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSounds:
-  - {fileID: 8300000, guid: ecf0d39d18b04a3418026339d120071f, type: 3}
-  - {fileID: 8300000, guid: e66425772bbf44840b216899f9e21d1c, type: 3}
-  - {fileID: 8300000, guid: 52da0d19ff461e940991cefaa7b117d0, type: 3}
-  - {fileID: 8300000, guid: f2d3c298a8eca56419adf30c9cb54cf5, type: 3}
-  - {fileID: 8300000, guid: cc6c994f247ee164e910157312720acb, type: 3}
+  - {fileID: 8300000, guid: c67ba4694b8d0be4e866fccec9ed1905, type: 3}
+  - {fileID: 8300000, guid: 063d0e04d907da04a8f748c2751525ac, type: 3}
+  - {fileID: 8300000, guid: dac86b78ae47e034e9df622df9f893e1, type: 3}

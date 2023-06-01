@@ -97,9 +97,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107166320223741690}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 0.02, y: 0.019999998, z: 0.043648828}
   m_Center: {x: 0, y: -0.00000023841858, z: -0.0066019585}
 --- !u!54 &7537061759138610732
@@ -109,10 +117,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107166320223741690}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -265,7 +284,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c854a3582803284aaec41c020adc590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionSounds: []
+  collisionSounds:
+  - {fileID: 8300000, guid: 4546fd307c9842a46a25b5c1e3e63bcd, type: 3}
+  - {fileID: 8300000, guid: 76fd5b1ec49960d45a42ca50ec743226, type: 3}
+  - {fileID: 8300000, guid: f162d81fb66161445a0048afdade0a5c, type: 3}
 --- !u!114 &2134734878572241187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,4 +301,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FoodClass: 1
-  EatingSound: {fileID: 0}
+  EatingSound: {fileID: 8300000, guid: d723f36422de10c4eb543f42bf5efbb2, type: 3}

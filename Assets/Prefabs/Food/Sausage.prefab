@@ -100,7 +100,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c854a3582803284aaec41c020adc590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionSounds: []
+  collisionSounds:
+  - {fileID: 8300000, guid: 98b39dde2a18cc9419372f3ffa945bf3, type: 3}
+  - {fileID: 8300000, guid: c790e10c355439449983727ca999c536, type: 3}
+  - {fileID: 8300000, guid: 9592a95482babfb48a60a35b5083ba95, type: 3}
+  - {fileID: 8300000, guid: 7300e49ffb5e0534b885092a15be80d4, type: 3}
 --- !u!114 &8377212598480714864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FoodClass: 3
-  EatingSound: {fileID: 0}
+  EatingSound: {fileID: 8300000, guid: e5452b2ac30d3b74ca50df0773f56a7d, type: 3}
 --- !u!54 &8377212598480714867
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -122,10 +126,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8377212598480714868}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -274,9 +289,17 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8377212598480714868}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8930983086252291749, guid: bf6048680635e2b4aa74c8cd257e513d, type: 3}

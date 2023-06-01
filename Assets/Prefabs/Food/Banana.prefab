@@ -96,9 +96,17 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3310887280464264690}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300004, guid: c8e00729a02fc2445874fdd6f59c37c8, type: 3}
@@ -109,10 +117,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3310887280464264690}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -287,3 +306,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7b719821e3e2a124bbd89f1a6f2d1655, type: 3}
   - {fileID: 8300000, guid: 275204cf471812e43b8a69ea4957bf2b, type: 3}
   - {fileID: 8300000, guid: 49a93d83a5bc93342ab55e3f62544d9f, type: 3}
+  - {fileID: 8300000, guid: 370b88f88cc21da48b098f63ec35ed1a, type: 3}
+  - {fileID: 8300000, guid: 5f623084494a0b649af2fadca4dd3f92, type: 3}
+  - {fileID: 8300000, guid: 2b1d164ebf31f694e972d41df979880e, type: 3}
+  - {fileID: 8300000, guid: 9aa773742aff053498a58179ad1b1ab1, type: 3}
+  - {fileID: 8300000, guid: ebb32b867a36f7442aaedb92081d87f1, type: 3}
