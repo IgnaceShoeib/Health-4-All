@@ -2144,7 +2144,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &404178496
 PrefabInstance:
@@ -2729,7 +2729,7 @@ Transform:
   - {fileID: 1518738196}
   - {fileID: 488484614}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &455743080
 GameObject:
@@ -2777,7 +2777,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &455954473
 PrefabInstance:
@@ -2867,6 +2867,79 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 455954473}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &473266992
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 14fe71edbc7e6ec44a9d44306451c98f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 14fe71edbc7e6ec44a9d44306451c98f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.2068856
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 14fe71edbc7e6ec44a9d44306451c98f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.49
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 14fe71edbc7e6ec44a9d44306451c98f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.72966504
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 14fe71edbc7e6ec44a9d44306451c98f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 14fe71edbc7e6ec44a9d44306451c98f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 14fe71edbc7e6ec44a9d44306451c98f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 14fe71edbc7e6ec44a9d44306451c98f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 14fe71edbc7e6ec44a9d44306451c98f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 14fe71edbc7e6ec44a9d44306451c98f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 14fe71edbc7e6ec44a9d44306451c98f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 14fe71edbc7e6ec44a9d44306451c98f,
+        type: 3}
+      propertyPath: m_Name
+      value: Banana_Mascot_T-pose
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 14fe71edbc7e6ec44a9d44306451c98f, type: 3}
 --- !u!1001 &488484613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3757,7 +3830,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &785376189
 PrefabInstance:
@@ -4365,7 +4438,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 143.729, y: -15.052002, z: 46.773987}
 --- !u!108 &962921853
 Light:
@@ -6266,7 +6339,7 @@ PrefabInstance:
     - target: {fileID: 1554129344543722984, guid: 92b390c90a7236f42b2f6adecf7a0e15,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1554129344543722984, guid: 92b390c90a7236f42b2f6adecf7a0e15,
         type: 3}
@@ -11174,7 +11247,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189,
         type: 3}
@@ -11900,7 +11973,7 @@ PrefabInstance:
     - target: {fileID: 3723327109829093269, guid: 3bc28affc88a82841a4d22bc231a06b6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3723327109829093269, guid: 3bc28affc88a82841a4d22bc231a06b6,
         type: 3}
@@ -12677,7 +12750,7 @@ PrefabInstance:
     - target: {fileID: 5797655776305520482, guid: 9fbf61e222deaa743846b01012b926a0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5797655776305520482, guid: 9fbf61e222deaa743846b01012b926a0,
         type: 3}
@@ -13481,15 +13554,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.005192235
       objectReference: {fileID: 0}
-    - target: {fileID: 7825100416038933762, guid: 661ecef23e744d944937ece08e383833,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8925956607116715676, guid: 661ecef23e744d944937ece08e383833,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8925956607116715676, guid: 661ecef23e744d944937ece08e383833,
         type: 3}
