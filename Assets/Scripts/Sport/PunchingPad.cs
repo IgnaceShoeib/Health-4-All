@@ -7,7 +7,6 @@ public class PunchingPad : MonoBehaviour
 	void Start()
 	{
 		punchingPadController = FindAnyObjectByType<PunchingPadController>();
-		name = gameObject.name;
 	}
 	void OnTriggerEnter(Collider other)
 	{
