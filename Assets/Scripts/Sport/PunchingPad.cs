@@ -6,7 +6,7 @@ public class PunchingPad : MonoBehaviour
 	private PunchingPadController punchingPadController;
 	void Start()
 	{
-		punchingPadController = GetComponentInParent<PunchingPadController>();
+		punchingPadController = FindAnyObjectByType<PunchingPadController>();
 		name = gameObject.name;
 	}
 	void OnTriggerEnter(Collider other)
