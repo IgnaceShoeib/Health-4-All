@@ -1,8 +1,9 @@
 public class PunchingPadController : SportGame
 {
 	private string lastHit = "";
+	public PunchingPad[] pads;
 
-	public void Hit(string handName)
+    public void Hit(string handName)
 	{
 		if (!ActiveGame)
 			return;
@@ -16,4 +17,18 @@ public class PunchingPadController : SportGame
 		var sportPoints = FindFirstObjectByType<SportPoints>();
 		sportPoints.SwitchGame();
 	}
+    public override void OnActiveGameTrue()
+    {
+        foreach (var pad in pads)
+        {
+			pad.gameObject.SetActive(true);
+        }
+    }
+    public override void OnActiveGameFalse()
+    {
+        foreach (var pad in pads)
+        {
+            pad.gameObject.SetActive(false);
+        }
+    }
 }
