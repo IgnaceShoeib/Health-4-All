@@ -29,3 +29,6 @@
     - XR Interaction Toolkit
     - XR Legacy Input Helpers
     - XR Plugin Management
+4. Download the following XR Interaction Toolkit samples
+    - Starter Assets
+    - XR Device Simulator
