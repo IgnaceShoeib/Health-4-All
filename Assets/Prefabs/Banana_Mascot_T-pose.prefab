@@ -544,7 +544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sportGames:
-  - {fileID: 0}
+  - {fileID: 3128157007118872258}
   - {fileID: 0}
   - {fileID: 0}
 --- !u!95 &3931885410223934224
@@ -1233,8 +1233,8 @@ MonoBehaviour:
   MaxPoints: 10
   CurrentPoints: 0
   pads:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 685045439586958633}
+  - {fileID: 4924392936281546845}
 --- !u!1 &6793741260151876865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1958,53 +1958,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6987298679207488409, guid: c8fea25107ca6be45947baa16a396c16,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 100.00005
-      objectReference: {fileID: 0}
-    - target: {fileID: 6987298679207488409, guid: c8fea25107ca6be45947baa16a396c16,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 100.00003
-      objectReference: {fileID: 0}
-    - target: {fileID: 6987298679207488409, guid: c8fea25107ca6be45947baa16a396c16,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 100.000046
-      objectReference: {fileID: 0}
-    - target: {fileID: 6987298679207488409, guid: c8fea25107ca6be45947baa16a396c16,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.1095648
-      objectReference: {fileID: 0}
-    - target: {fileID: 6987298679207488409, guid: c8fea25107ca6be45947baa16a396c16,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.2373663
-      objectReference: {fileID: 0}
-    - target: {fileID: 6987298679207488409, guid: c8fea25107ca6be45947baa16a396c16,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.117753044
-      objectReference: {fileID: 0}
-    - target: {fileID: 6987298679207488409, guid: c8fea25107ca6be45947baa16a396c16,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.4330234
-      objectReference: {fileID: 0}
-    - target: {fileID: 6987298679207488409, guid: c8fea25107ca6be45947baa16a396c16,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.43302074
-      objectReference: {fileID: 0}
-    - target: {fileID: 6987298679207488409, guid: c8fea25107ca6be45947baa16a396c16,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.5590116
-      objectReference: {fileID: 0}
-    - target: {fileID: 6987298679207488409, guid: c8fea25107ca6be45947baa16a396c16,
-        type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.55900794
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6987298679207488409, guid: c8fea25107ca6be45947baa16a396c16,
         type: 3}
@@ -2084,6 +2039,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HandObjectName: RightHand (Teleport Locomotion)
+  hitSounds:
+  - {fileID: 8300000, guid: fdbf9c64961a7a043978c16a3a414744, type: 3}
+  - {fileID: 8300000, guid: 27825a3c13d98f645bce986bea2745f7, type: 3}
+  - {fileID: 8300000, guid: 34434d998e0da4c4c935d45f3156270d, type: 3}
 --- !u!54 &4686320353629149988
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2137,52 +2096,27 @@ PrefabInstance:
     - target: {fileID: 6987298679207488409, guid: c8fea25107ca6be45947baa16a396c16,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 100.000046
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6987298679207488409, guid: c8fea25107ca6be45947baa16a396c16,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 100.00004
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6987298679207488409, guid: c8fea25107ca6be45947baa16a396c16,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 100.000046
-      objectReference: {fileID: 0}
-    - target: {fileID: 6987298679207488409, guid: c8fea25107ca6be45947baa16a396c16,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.513576
-      objectReference: {fileID: 0}
-    - target: {fileID: 6987298679207488409, guid: c8fea25107ca6be45947baa16a396c16,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.2373662
-      objectReference: {fileID: 0}
-    - target: {fileID: 6987298679207488409, guid: c8fea25107ca6be45947baa16a396c16,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.4471912
-      objectReference: {fileID: 0}
-    - target: {fileID: 6987298679207488409, guid: c8fea25107ca6be45947baa16a396c16,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.55659264
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6987298679207488409, guid: c8fea25107ca6be45947baa16a396c16,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.5614163
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6987298679207488409, guid: c8fea25107ca6be45947baa16a396c16,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.43114987
-      objectReference: {fileID: 0}
-    - target: {fileID: 6987298679207488409, guid: c8fea25107ca6be45947baa16a396c16,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.43488646
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6987298679207488409, guid: c8fea25107ca6be45947baa16a396c16,
         type: 3}
@@ -2262,6 +2196,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HandObjectName: LeftHand (Teleport Locomotion)
+  hitSounds:
+  - {fileID: 8300000, guid: fdbf9c64961a7a043978c16a3a414744, type: 3}
+  - {fileID: 8300000, guid: 27825a3c13d98f645bce986bea2745f7, type: 3}
+  - {fileID: 8300000, guid: 34434d998e0da4c4c935d45f3156270d, type: 3}
 --- !u!54 &4334607809085472134
 Rigidbody:
   m_ObjectHideFlags: 0
