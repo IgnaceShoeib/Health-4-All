@@ -1,17 +1,20 @@
 using UnityEngine;
 
-public class HandCollision : SportGame
+public class HandCollision : MonoBehaviour
 {
 	private string name;
+	public MovementController ActiveMovementController;
 	void Start()
 	{
 		name = gameObject.name;
 	}
 	void OnTriggerStay(Collider other)
 	{
+		if (ActiveMovementController == null) return;
+		if (!ActiveMovementController.activeGame) return;
 		if (other.transform.parent.name == "LeftHand (Teleport Locomotion)" & name == "Left")
-			CurrentPoints++;
+			ActiveMovementController.CurrentPoints++;
 		if (other.transform.parent.name == "RightHand (Teleport Locomotion)" & name == "Right")
-			CurrentPoints++;
+			ActiveMovementController.CurrentPoints++;
 	}
 }
