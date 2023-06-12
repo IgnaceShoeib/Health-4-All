@@ -36,3 +36,5 @@
 
 1. Make a scene for every minigame (food, sport, mind)
 2. Make a scene for the lobby that connects every minigame
+3. Use the Terloplein 3d model in every scene
+4. Place every mascot in the main lobby with a play button to load the correct scene using [this script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/ChangeScene.cs)
