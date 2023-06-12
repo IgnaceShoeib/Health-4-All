@@ -76,3 +76,4 @@
 7. Add a collider, rigidbody, the [collision sound script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/CollisionSound.cs) and an XR grab interactable to each object you want the user to be able to pick up, including food and non-food items like plates
 8. Add sounds of the object falling to each interactable object with the [collision sound script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/CollisionSound.cs)
 9. In the mascot, add each combination of food you want to compare and adjust the location of the food items for them to correctly appear in the text bubble
+10. Add a billboard with a video on it that explains the game to the user
