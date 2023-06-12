@@ -62,6 +62,7 @@
             - From entry add an empty animation
             - From any state let it go to the animation and then to exit
     - Add the animator to the mascot
+    - Make a [FoodCombo script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Food/FoodCombo.cs) and [FoodClass script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Food/FoodClass.cs), this is needed for other scripts to function
     - Make a [Mascot script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Food/Mascot.cs) and add it to the mascot
     - Add a text bubble to the mascot and assign it in the mascot
     - Add thunder and rain to the scene and assign it in the mascot but make them inactive in the scene, the mascot will activate it when it is needed
