@@ -65,5 +65,8 @@
     - Make a [Mascot script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Food/Mascot.cs) and add it to the mascot
     - Add a text bubble to the mascot and assign it in the mascot
     - Add thunder and rain to the scene and assign it in the mascot but make them inactive in the scene, the mascot will activate it when it is needed
+    - Add a the [Thunder script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Food/Thunder.cs) to the thunder
     - Add a cross and checkmark to the mascot and assign it in the mascot, make sure the material on the checkmark and cross is invisible
     - Add a canvas to the mascot with text for the score and 2 buttons to restart or return to the lobby, make sure the canvas is inactive and assign it to the mascot
+    - Decorate the scene with benches, tables, trays, plates and other food related stuff
+    - Add a lot of different food and the [Food script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Food/Food.cs) to it
