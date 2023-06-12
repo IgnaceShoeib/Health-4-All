@@ -62,4 +62,4 @@
             - From entry add an empty animation
             - From any state let it go to the animation and then to exit
     - Add the animator to the mascot
-    - Make a [Mascot script](https://github.com/IgnaceShoeib/Health-4-All/raw/main/Assets/Models/Terloplein%203D%20version%203.fbx) and add it to the mascot
+    - Make a [Mascot script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Food/Mascot.cs) and add it to the mascot
