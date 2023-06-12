@@ -32,6 +32,8 @@
 4. Download the following XR Interaction Toolkit samples
     - Starter Assets
     - XR Device Simulator
+5. Download the following unity asset store assets
+    - [Quick Outline](https://assetstore.unity.com/packages/tools/particles-effects/quick-outline-115488)
 
 ### Part 2: setting up the scenes
 
