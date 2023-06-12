@@ -64,15 +64,15 @@
             - From entry add an empty animation
             - From any state let it go to the animation and then to exit
     - Add the animator to the mascot
-    - Make a [FoodCombo script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Food/FoodCombo.cs) and [FoodClass script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Food/FoodClass.cs), this is needed for other scripts to function
-    - Make a [Mascot script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Food/Mascot.cs) and add it to the mascot
+3. Make a [FoodCombo script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Food/FoodCombo.cs) and [FoodClass script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Food/FoodClass.cs), this is needed for other scripts to function
+4. Make a [Mascot script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Food/Mascot.cs) and add it to the mascot
     - Add a text bubble to the mascot and assign it in the mascot
     - Add thunder and rain to the scene and assign it in the mascot but make them inactive in the scene, the mascot will activate it when it is needed
     - Add the [Thunder script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Food/Thunder.cs) to the thunder
     - Add a cross and checkmark to the mascot and assign it in the mascot, make sure the material on the checkmark and cross is invisible
     - Add a canvas to the mascot with text for the score and 2 buttons to restart or return to the lobby, make sure the canvas is inactive and assign it to the mascot
-    - Decorate the scene with benches, tables, trays, plates and other food related stuff
-    - Add a lot of different food and the [Food script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Food/Food.cs) to it
-    - Add a collider, rigidbody, the [collision sound script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/CollisionSound.cs) and an XR grab interactable to each object you want the user to be able to pick up, including food and non-food items like plates
-    - Add sounds of the object falling to each interactable object with the [collision sound script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/CollisionSound.cs)
-    - In the mascot, add each combination of food you want to compare and adjust the location of the food items for them to correctly appear in the text bubble
+5. Decorate the scene with benches, tables, trays, plates and other food related stuff
+6. Add a lot of different food and the [Food script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Food/Food.cs) to it
+7. Add a collider, rigidbody, the [collision sound script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/CollisionSound.cs) and an XR grab interactable to each object you want the user to be able to pick up, including food and non-food items like plates
+8. Add sounds of the object falling to each interactable object with the [collision sound script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/CollisionSound.cs)
+9. In the mascot, add each combination of food you want to compare and adjust the location of the food items for them to correctly appear in the text bubble
