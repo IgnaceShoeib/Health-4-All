@@ -42,7 +42,7 @@
 3. Use the [Terloplein 3d model](https://github.com/IgnaceShoeib/Health-4-All/raw/main/Assets/Models/Terloplein%203D%20version%203.fbx) in every scene
 4. Place every mascot in the main lobby with a play button to load the correct scene using [this script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/ChangeScene.cs)
 
-### Part 3: the Food scene
+### Part 3: the food scene
 
 1. Add the [food mascot (the pear)](https://github.com/IgnaceShoeib/Health-4-All/raw/main/Assets/Models/Pear_Mascot_Jump_fixed.fbx) to the scene
 2. Create an animator for him and add all his animations to it.
@@ -77,3 +77,5 @@
 8. Add sounds of the object falling to each interactable object with the [collision sound script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/CollisionSound.cs)
 9. In the mascot, add each combination of food you want to compare and adjust the location of the food items for them to correctly appear in the text bubble
 10. Add a billboard with a video on it that explains the game to the user
+
+### Part 4: the sport scene
