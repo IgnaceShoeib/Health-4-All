@@ -72,3 +72,4 @@
     - Decorate the scene with benches, tables, trays, plates and other food related stuff
     - Add a lot of different food and the [Food script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Food/Food.cs) to it
     - Add a collider, rigidbody, the [collision sound script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/CollisionSound.cs) and an XR grab interactable to each object you want the user to be able to pick up, including food and non-food items like plates
+    - In the mascot, add each combination of food you want to compare and adjust the location of the food items for them to correctly appear in the text bubble
