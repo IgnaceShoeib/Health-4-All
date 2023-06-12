@@ -2,8 +2,8 @@
 ## Tutorial for how to set up the project from scratch
 ### Part 1: setting up the project
 
-1. Download unity hub</li>
-2. Download the lastest version of the unity editor 2022.3</li>
+1. Download unity hub
+2. Download the lastest version of the unity editor 2022.3
 3. Install the following packages 
     - AI Navigation
     - Burst
@@ -32,3 +32,7 @@
 4. Download the following XR Interaction Toolkit samples
     - Starter Assets
     - XR Device Simulator
+### Part 2: setting up the scenes
+
+1. Make a scene for every minigame (food, sport, mind)
+2. Make a scene for the lobby that connects every minigame
