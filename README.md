@@ -63,3 +63,6 @@
             - From any state let it go to the animation and then to exit
     - Add the animator to the mascot
     - Make a [Mascot script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Food/Mascot.cs) and add it to the mascot
+    - Add a text bubble to the mascot and assign it in the mascot
+    - Add thunder and rain to the scene and assign it in the mascot but make them inactive in the scene, the mascot will activate it when it is needed
+    - Add a cross and checkmark to the mascot and assign it in the mascot, make sure the material on the checkmark and cross is invisible
