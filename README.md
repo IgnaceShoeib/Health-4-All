@@ -100,3 +100,14 @@
         - Place a basket on the ground with a [basket script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/Basket.cs) attached, we will put apples in here\
     2. Barbell activity
         - Place a barbell 3d object and add a [barbell script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/Barbell.cs) to it.
+    3. Stretching activity
+        -  Make a [movement controller script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/MovementController.cs) and attach it to the mascot and type in the correct animation name.
+        -  In the player rig add a new empty gameobject and add a XR controller to it, set the position action reference to XR HeadPosition. In that object add the banana but disable every mesh renderer, be sure to have the animator in it. in each hand add a collider, rigidbody and the [hand collision script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/HandCollision.cs).
+    4. Squating activity
+       -   Make a [movement controller script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/MovementController.cs) and attach it to the mascot and type in the correct animation name.
+       -   if you haven't done so already, in the player rig add a new empty gameobject and add a XR controller to it, set the position action reference to XR HeadPosition. In that object add the banana but disable every mesh renderer, be sure to have the animator in it. in each hand add a collider, rigidbody and the [hand collision script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/HandCollision.cs).
+    5. Punching activity
+        -  Add the [punching pad controller script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/PunchingPadController.cs) to the mascot.
+        -  In each hand of the mascot, add a punching pad 3d model with a collider and rigidbody. Be sure to disable this object. Add the [punching pad script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/PunchingPad.cs) to it. Assign sounds to it for when the player hits it and correctly type the name of the player hand.
+        -  In the punching pad controller, assign each punching pad.
+6. In the [sport points script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/SportPoints.cs) you can now assign each of the sport games we just made.
