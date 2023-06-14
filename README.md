@@ -91,8 +91,9 @@
         - Eyes
             - Add the animation for the eyes from entry and let it go to another eyes animation to make it loop forever
     - Add the animator to the mascot
-3. First make a [sport game script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/SportGame.cs), all sport activities will inherit from this script 
-4. Now make different food activities
+3. First make a [sport points script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/SportPoints.cs), this is the main script, add it to the mascot.
+4. Also make a [sport game script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/SportGame.cs), all sport activities will inherit from this script 
+5. Now make different food activities
     1. Apple activity 
         - Place a tree and add an [apple controller script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/AppleController.cs) to it. this will control the apple minigame
         - Assign an apple prefab to the tree that has an [apple script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/Apple.cs) attached to it
