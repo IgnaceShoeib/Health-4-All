@@ -41,6 +41,7 @@
 2. Make a scene for the lobby that connects every minigame
 3. Use the [Terloplein 3d model](https://github.com/IgnaceShoeib/Health-4-All/raw/main/Assets/Models/Terloplein%203D%20version%203.fbx) in every scene
 4. Place every mascot in the main lobby with a play button to load the correct scene using [this script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/ChangeScene.cs)
+5. Add a complete XR origin Set Up to each scene, this is the player
 
 ### Part 3: the food scene
 
@@ -90,3 +91,6 @@
         - Eyes
             - Add the animation for the eyes from entry and let it go to another eyes animation to make it loop forever
     - Add the animator to the mascot
+3. Place a tree and add an [apple controller script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/AppleController.cs) to it. this will control the apple minigame
+4. Assign an apple prefab to the tree that has an [apple script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/Apple.cs) attached to it
+5. Place a basket on the ground with a [basket script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/Basket.cs) attached, we will put apples in here
