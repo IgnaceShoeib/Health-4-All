@@ -91,6 +91,11 @@
         - Eyes
             - Add the animation for the eyes from entry and let it go to another eyes animation to make it loop forever
     - Add the animator to the mascot
-3. Place a tree and add an [apple controller script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/AppleController.cs) to it. this will control the apple minigame
-4. Assign an apple prefab to the tree that has an [apple script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/Apple.cs) attached to it
-5. Place a basket on the ground with a [basket script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/Basket.cs) attached, we will put apples in here
+3. First make a [sport game script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/SportGame.cs), all sport activities will inherit from this script 
+4. Now make different food activities
+    1. Apple activity 
+        - Place a tree and add an [apple controller script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/AppleController.cs) to it. this will control the apple minigame
+        - Assign an apple prefab to the tree that has an [apple script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/Apple.cs) attached to it
+        - Place a basket on the ground with a [basket script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/Basket.cs) attached, we will put apples in here\
+    2. Barbell activity
+        - Place a barbell 3d object and add a [barbell script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Sport/Barbell.cs) to it.
