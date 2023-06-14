@@ -51,18 +51,18 @@
             - Add the animation for the eyes from entry and let it go to another eyes animation to make it loop forever
         - Mouth
             - From entry add an empty animation
-            - From any state let it go to the animation and then to exit
+            - From any state let it go to the animation and then to exit. Also put a condition on the connection from the any state.
         - Idle
             - Add the idle animation from entry and let it go to another idle animation to make it loop forever
         - Jump
             - From entry add an empty animation
-            - From any state let it go to the animation and then to the thinking animation and then to the exit
+            - From any state let it go to the animation and then to the thinking animation and then to the exit. Also put a condition on the connection from the any state.
         - Sad
             - From entry add an empty animation
-            - From any state let it go to the animation and then to the thinking animation and then to the exit 
+            - From any state let it go to the animation and then to the thinking animation and then to the exit. Also put a condition on the connection from the any state.
         - SadMouth 
             - From entry add an empty animation
-            - From any state let it go to the animation and then to exit
+            - From any state let it go to the animation and then to exit. Also put a condition on the connection from the any state.
     - Add the animator to the mascot
 3. Make a [FoodCombo script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Food/FoodCombo.cs) and [FoodClass script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Food/FoodClass.cs), this is needed for other scripts to function
 4. Make a [Mascot script](https://github.com/IgnaceShoeib/Health-4-All/blob/main/Assets/Scripts/Food/Mascot.cs) and add it to the mascot
@@ -79,3 +79,14 @@
 10. Add a billboard with a video on it that explains the game to the user
 
 ### Part 4: the sport scene
+
+1. Add the [sport mascot (the banana)](https://github.com/IgnaceShoeib/Health-4-All/raw/main/Assets/Models/Banana_Mascot_Idle2.fbx) to the scene
+2. Create an animator for him and add all his animations to it.
+    - Make 2 different layers and put the weight on 1 for each and name them
+        - Main
+            - Add the animation for the idle animation from entry and let it go to another idle animation to make it loop forever. Also connect it from any state with an condition.
+            - Add an animation from the any state to the squat animation and let it loop into itself. Also put a condition on the connection from the any state.
+            - Add an animation from the any state to the stretch animation and let it loop into itself. Also put a condition on the connection from the any state.
+        - Eyes
+            - Add the animation for the eyes from entry and let it go to another eyes animation to make it loop forever
+    - Add the animator to the mascot
